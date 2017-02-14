@@ -1,0 +1,111 @@
+﻿<h3 class="important-tittle">Labels</h3>
+
+A Label is any string representation of any value in the chart, they are normally placed over the axis length and in tool tips.
+
+<div class="text-center">
+    <img src="/App/Examples/v1/Labels/Images/labels.jpg" />
+</div>
+
+<h4>Code Behind</h4>
+
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/Cartesian/Labels/Labels.cs"></pre>
+
+<p>
+    There are 2 types of labels in LiveCharts, Formatted and Mapped labels.
+</p>
+
+<h4>Formatted Labels <small class="text-muted">As seen at Y axis</small></h4>
+
+<p>
+    A Formatted label is useful when there is a direct conversion between the chart value and the label, for example, in the image above, the Y axis has a range of values between 8 and 26, but because of the current formatter, we are able to see 8 as 8.00k items.
+</p>
+
+<p>
+    This is really easy to achieve, the Axis.LabelFormatter property, stores a function that takes a double value as parameter and returns a string, LiveCharts will use this function every time it needs to display a chart value as string.
+</p>
+
+<pre class="prettyprint">MyAxis.LabelFormatter = val => val.ToString("C"); //as currency
+MyAxis.LabelFormatter = val => val + "°"; //as degrees
+MyAxis.LabelFormatter = val => val + ".00 items sold"; //or any other custom format</pre>
+
+<h4>Mapped Labels <small class="text-muted">As seen at X axis</small></h4>
+
+<p>
+    A mapped label is normally useful to map a position with a name, for example when first point belongs to John second to Susan and third one to Charles.
+</p>
+
+<pre class="prettyprint">cartesianChart1.AxisX.Add(new LiveCharts.Wpf.Axis
+{
+   Labels = new[]
+   {
+      "Shea Ferriera",
+      "Maurita Powel",
+      "Scottie Brogdon",
+      "Teresa Kerman",
+      "Nell Venuti",
+      "Anibal Brothers",
+      "Anderson Dillman"
+   }
+});</pre>
+
+<p>
+    A mapped label means that an axis value will be represented by a string in the <i>Axis.Labels</i> property,
+    Axis.Labels type is IList&lt;string&gt; so when axis value is 0, then the label will be Labels[0], when value eq 1 &gt; Labels[1],
+    value eq 2 &gt; Labels[2], value eq 3 &gt; Labels[3], ..., value eq <i>n</i> &gt; Labels[<i>n</i>].
+</p>
+
+<p>
+    Notice that if the axis value is greater than Labels.Count an empty string will be returned.
+</p>
+
+<p>
+    Axis.Labels hides Axis.LabelFormatter, therefore if Axis.Labels is not null then labels will be pulled from Axis.Labels, if Axis.Labels is null then LiveCharts will use the formatter, if both are null then the raw value will be used as label.
+</p>
+
+<h4>Data Labels</h4>
+
+<p>
+    Any time you need a label on every point of your series (<small class="text-muted">as shown in image</small>), set the <i>Series.DataLabels</i> property to true.
+</p>
+
+<p>
+    If necessary, you can also customize the DataLabel, using the <i>Series.LabelPoint</i> property
+</p>
+
+<pre class="prettyprint">new ColumnSeries
+{
+   Values = new ChartValues&gt;double> { 4, 2, 8, 2, 3, 0, 1 },
+   DataLabels = true,
+   LabelPoint = point => point.Y + "K"
+}</pre>
+
+<h4>Rotating labels</h4>
+
+<p>
+    Some times your labels are long, and you need to optimize the space, in this case you can rotate any axis labels.
+    You can use any angle, even negatives.
+</p>
+
+<pre class="prettyprint">cartesianChart1.AxisX.Add(new LiveCharts.Wpf.Axis
+{
+   Labels = new[]
+   {
+      "Shea Ferriera",
+      "Maurita Powel",
+      "Scottie Brogdon",
+      "Teresa Kerman",
+      "Nell Venuti",
+      "Anibal Brothers",
+      "Anderson Dillman"
+   },
+   LabelsRotation = 13,
+   Separator = new Separator // force the separator step to 1, so it always display all labels
+   {
+     Step = 1, // if you don't force the separator, it will be calculated automatically, and could skip some labels
+     IsEnabled = false //disable it to make it invisible.
+   }
+});</pre>
+
+<p>
+    Find this full example <a href="https://github.com/beto-rodriguez/Live-Charts/tree/master/Examples/WinForms/Cartesian/Labels">here</a>
+</p>

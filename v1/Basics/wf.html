@@ -1,0 +1,89 @@
+﻿<h3 class="important-tittle">Basics</h3>
+
+<p>
+    LiveCharts is designed to be easy for the user, everything is updated and animated
+    automatically, the library will only update when it considers it is necessary, not every time your data changes,
+    when you add/remove series, or add/remove values the chart will update by itself, you really don’t need
+    to worry about anything but your business, let LiveCharts handle the charting.
+</p>
+
+<h4>Starting Example</h4>
+
+<p>
+    There are many types ready to plot already defined, you can learn more in the
+    <a href="/App/examples/v1/wf/Types%20and%20Configuration">Types and Configuration section</a>, in
+    this brief example we are plotting double values.
+</p>
+
+<h4>Code Behind</h4>
+
+<pre class="prettyprint">myChart.Series = new SeriesCollection
+{
+    new LineSeries
+    {
+        Values = new ChartValues&lt;double> { 3, 5, 7, 4 }
+    },
+    new BarSeries                
+    {
+        Values = new ChartValues&lt;decimal> { 5, 6, 2, 7 }
+    }
+};</pre>
+
+<p>
+    Simple isn't it? that is all you need, now every time you add/remove a series to the SeriesCollection instance or add/remove a value at every series, the chart will update and animate automatically.
+</p>
+
+<h4>Components</h4>
+
+<p>
+    The next image will guide you to get more familiar with LiveCharts.
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/Basics/Images/components.png"/>
+</div>
+
+<p>
+    All the series have a <i>Stroke</i> and <i>Fill</i> properties.
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/Basics/Images/strokeandfill.png" />
+</div>
+
+<p>
+    By default if you don't set the Fill or Stroke properties, LiveCharts will use a predefined color, according
+    to the series positions in the <i>Chart.SeriesCollection</i> property, you can easily define your own colors set,
+    this colors will repeat if necessary.
+</p>
+
+<pre class="prettyprint">LiveCharts.Wpf.Charts.Chart.Base.Colors = new List&lt;System.Windows.Media.Color&gt;
+{
+  System.Windows.Media.Colors.Red,
+  System.Windows.Media.Colors.Blue,
+  System.Windows.Media.Colors.Green
+};</pre>
+
+<p>
+    Or you can simply set a Fill and Stroke only for a specific series
+</p>
+
+<pre class="prettyprint">mySeries.Stroke = System.Windows.Media.Brushes.Red;
+mySeries.Fill = System.Windows.Media.Brushes.Blue;</pre>
+
+<p>
+    Also setting the <i>Series.Visibility</i> (will define the drawn shape visibility), 
+    <i>Panel.ZIndex</i> (drawn shape z-index property), <i>Series.StrokeDashArray</i> (dashed strokes) properties
+    will be binded to the drawn shape,  for example:
+</p>
+
+<pre class="prettyprint">mySeries.Visibility = System.Windows.Visibility.Hidden;
+mySeries.StrokeDashArray = new System.Windows.Media.DoubleCollection {2};
+System.Windows.Controls.Panel.SetZIndex(mySeries, 3);</pre>
+
+<h4>Custom Components</h4>
+
+<p>
+    If necessary you can also define your own tooltips or legends controls,
+    <a href="/App/examples/v1/wf/Customizing Tooltips">here</a> is an article about it
+</p>
