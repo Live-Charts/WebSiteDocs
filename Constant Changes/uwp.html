@@ -1,0 +1,41 @@
+﻿<h3 class="important-tittle">Constant Changes</h3>
+
+<p>
+    In this example we are simulating a constant data read every 300ms, and using a custom type with a
+    <i class="text-muted">DateTime</i> and a <i class="text-muted">double</i> properties, in this case
+    we are disabling animations in the <i>X</i> axis to get a better visual effect.
+</p>
+
+<p>
+    In the next example if you reduce the timer interval to a lower frequency than <i class="text-muted">Chart.AnimationsSpeed</i> property, default is 500ms,
+    you could notice how the chart is updated only when animations finished, the chart updater frequency is directly related with
+    the <i class="text-muted">Chart.AnimationsSpeed</i> property, if your data updates in a lower frequency than animations speed it is recommended to reduce the animations speed property too
+    (<i class="text-muted">Chart.AnimationsSpeed = TimeSpan.FromMilliseconds(50)</i>), or you
+    could just disable animations in extreme cases (<i class="text-muted">Chart.DisableAnimations = true;</i>), animations
+    run really well at high speeds, animations are awesome, do not waste them!
+</p>
+
+<div class="text-center">
+    <img src="/App/Examples/v1/Constant Changes/Images/constant.gif"/>
+</div>
+
+<div class="doc-alert">
+    To keep this example always up to date it is directly pulled from the Github repository, the
+    repo for simplicity uses the <i>Page</i> class to wrap every example, but you can use any
+    container for your plots.
+</div>
+
+<p>
+    In this example we are going to plot our own type, the <i class="text-muted">MeasureModel</i> class, add a new
+    class file to your project as follows
+</p>
+
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/ConstantChanges/MeasureModel.cs"></pre>
+
+<h4>Code Behind</h4>
+
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/ConstantChanges/ConstantChangesChart.xaml.cs"></pre>
+
+<h4>XAML</h4>
+
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/ConstantChanges/ConstantChangesChart.xaml"></pre>
