@@ -1,9 +1,8 @@
 ﻿<h3 class="important-tittle">Zooming and panning</h3>
 
 <p>
-    Setting the <i>Chart.Zoom</i> property enables zooming and panning for the Cartesian chart,
-    use the mouse wheel to zoom in/out click, hold and drag for panning. The <i>Zoom</i> property has 
-    many options, <i>None, X, Y, Xy</i>
+    Use <i class="text-muted">Chart.Zoom (default is None)</i> and <i class="text-muted">Chart.Pan (default is Unset)</i>,
+    use the mouse wheel to zoom in/out, click, hold and drag for panning.
 </p>
 
 <p>
@@ -11,87 +10,25 @@
     you can use this type or <a href="/App/examples/v1/wpf/Types%20and%20Configuration">configure</a> your own.
 </p>
 
+<p>
+    You can easily zoom or pan grammatically only setting the axis limits, for more information see the
+    <a href="/App/examples/v1/wpf/Data%20Pagination">Data Pagination</a> article
+</p>
+
 <div class="text-center">
     <img src="/App/Examples/v1/Zooming and panning/Images/zandp.gif"/>
 </div>
 
+<div class="doc-alert">
+    To keep this example always up to date it is directly pulled from the Github repository, the
+    repo for simplicity uses the <i>UserControl</i> class to wrap every example, but you can use any
+    container for your plots.
+</div>
+
 <h4>Code Behind</h4>
 
-<pre class="prettyprint">using System;
-using System.ComponentModel;
-using System.Globalization;
-using System.Runtime.CompilerServices;
-using System.Windows;
-using System.Windows.Data;
-using System.Windows.Media;
-using LiveCharts;
-using LiveCharts.Defaults;
-using LiveCharts.Wpf;
-using Wpf.Annotations;
-
-namespace Wpf.CartesianChart
-{
-    public partial class ZoomingAndPanning : INotifyPropertyChanged
-    {
-
-        public ZoomingAndPanning()
-        {
-            InitializeComponent();
-
-            //using a gradient brush.
-            var gradientBrush = new LinearGradientBrush {StartPoint = new Point(0, 0),
-                EndPoint = new Point(0, 1)};
-            gradientBrush.GradientStops.Add(new GradientStop(Color.FromRgb(33, 148, 241), 0));
-            gradientBrush.GradientStops.Add(new GradientStop(Colors.Transparent, 1));
-
-            SeriesCollection = new SeriesCollection
-            {
-                new LineSeries
-                {
-                    Values = GetData(),
-                    Fill = gradientBrush,
-                    StrokeThickness = 1,
-                    PointDiameter = 0
-                }
-            };
-
-            XFormatter = val => new DateTime((long) val).ToString("dd MMM");
-            YFormatter = val => val.ToString("C");
-
-            DataContext = this;
-        }
-
-        public SeriesCollection SeriesCollection { get; set; }
-        public Func&lt;double, string&gt; XFormatter { get; set; }
-        public Func&lt;double, string&gt; YFormatter { get; set; }
-
-        private ChartValues&lt;DateTimePoint&gt; GetData()
-        {
-            var r = new Random();
-            var trend = 100;
-            var values = new ChartValues&lt;DateTimePoint&gt;();
-            for (var i = 0; i < 100; i++)
-            {
-                var seed = r.NextDouble();
-                if (seed > .8) trend += seed > .9 ? 50 : -50;
-                values.Add(new DateTimePoint(DateTime.Now.AddDays(i), trend + r.Next(0, 10)));
-            }
-            return values;
-        }
-    }
-}</pre>
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/ZoomingAndPanning/ZoomingAndPanning.cs"></pre>
 
 <h4>XAML</h4>
 
-<pre class="prettyprint">&lt;lvc:CartesianChart Grid.Row="2" Series="{Binding SeriesCollection}" Zoom="X" &gt;
-  &lt;lvc:CartesianChart.AxisX&gt;
-    &lt;lvc:Axis LabelFormatter="{Binding XFormatter}" Separator="{x:Static lvc:DefaultAxes.CleanSeparator}"/&gt;
-  &lt;/lvc:CartesianChart.AxisX&gt;
-  &lt;lvc:CartesianChart.AxisY&gt;
-    &lt;lvc:Axis LabelFormatter="{Binding YFormatter}"/&gt;
-  &lt;/lvc:CartesianChart.AxisY&gt;
-&lt;/lvc:CartesianChart&gt;</pre>
-
-
-
-
+<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/ZoomingAndPanning/ZoomingAndPanning.xaml"></pre>
