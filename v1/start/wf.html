@@ -1,0 +1,120 @@
+<h3 class="important-tittle">LiveCharts Documentation</h3>
+
+<p>
+    Use the left menu to find what you need, if you find something wrong or that could be better
+    you can edit this documentation by clicking <i class="text-muted">"<i class="fa fa-pencil"></i> Edit"</i>
+    at the top of every page, if you see some
+</p>
+
+<p>
+    Some of these examples use <a href="/licensing/pricing">LiveCharts.Geared</a>, it is an optional extension
+    that boost LiveCharts performance, you will find a note like the next one when the sample uses the Geared package
+</p>
+
+<uses-geared></uses-geared>
+
+<h4>Recommended Examples</h4>
+
+<div class="row">
+    <a href="examples/v1/wf/Material%20Design">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <h5 class="text-center">Material design</h5>
+            <p>
+                Charts that match Material Design style.
+            </p>
+            <img src="https://github.com/Live-Charts/WebSiteDocs/blob/master/v1/Available%20Charts/Images/material.gif"/>
+        </div>
+    </a>
+    <a href="examples/v1/wf/Constant%20Changes%20II">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <h5 class="text-center">Constant Changes II</h5>
+            <p>
+                A high performance chart with 20k points following multi thread practices.
+            </p>
+            <img src="https://github.com/Live-Charts/WebSiteDocs/blob/master/v1/Available%20Charts/Images/constanchanges2.gif"/>
+        </div>
+    </a>
+    <a href="examples/v1/wf/30%20Series%2010k%20pts%20eachn">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <h5 class="text-center">30 series 10k pts each</h5>
+            <p>
+                A crowded chart, 30 series with 10,000 points each series.
+            </p>
+            <img src="https://github.com/Live-Charts/WebSiteDocs/blob/master/v1/Available%20Charts/Images/30series10k.png"/>
+        </div>
+    </a>
+    <a href="examples/v1/wf/Scrollable">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <h5 class="text-center">Scrollable</h5>
+            <p>
+                An example that links 2 charts with many points to navigate through records easily.
+            </p>
+            <img src="https://github.com/Live-Charts/WebSiteDocs/blob/master/v1/Available%20Charts/Images/scrollable.gif" />
+        </div>
+    </a>
+</div>
+
+<h4>FAQ</h4>
+
+<div class="row">
+    <div class="col-xs-12 spaced">
+        <p>
+            <b>
+                How do I convert a chart to image?
+            </b>
+        </p>
+        <p>
+            Please use <a href="https://msdn.microsoft.com/en-us/library/system.windows.media.imaging.rendertargetbitmap.aspx">RenderTargetBitmap Class</a>.
+        </p>
+    </div>
+    <div class="col-xs-12 spaced">
+        <p>
+            <b>
+                How do I render a chart that is not in thew screen?
+            </b>
+        </p>
+        <p>
+            This is not supported for now, keep an eye on <a href="https://github.com/beto-rodriguez/Live-Charts/issues/415">#415</a>.
+        </p>
+    </div>
+    <div class="col-xs-12 spaced">
+        <p>
+            <b>
+                How do I zoom or pan grammatically?
+            </b>
+        </p>
+        <p>
+            As easy as setting the <i class="text-muted">Axis.MinValue</i> and <i class="text-muted">Axis.MaxValue</i> properties,if you need
+            more information please see <a href="examples/v1/wf/Data%20Pagination">Data Pagination</a> article.
+        </p>
+    </div>
+    <div class="col-xs-12 spaced">
+        <p>
+            <b>
+                Why am I getting ugly animations?
+            </b>
+        </p>
+        <p>
+            Reference types are easier to track than value types for the library, if in the
+            example you are following the code is plotting a reference type point, like <i class="text-muted">ObservableValue</i> class and
+            you are reproducing it but plotting double values instead, then you might get a different animation.
+        </p>
+    </div>
+    <div class="col-xs-12 spaced">
+        <p>
+            <b>
+                Why my chart has a poor performance?
+            </b>
+        </p>
+        <p>
+            Give it a try to <a href="/Licensing/Pricing">LiveCharts.Geared</a>, it is an independent package that boost the performance of the library,
+            LiveCharts started as only good looking charts, performance was never the target, but then as the popularity of the library went up, I
+            Beto Rodríguez was forced to add this package so the library was a full solution, the Geared package is a really solid alternative for
+            high pricing libraries, the reason why I started this library is to avoid those huge prices, give it a try maybe it also helps you.
+        </p>
+    </div>
+</div>
+
+
+
+
