@@ -1,10 +1,10 @@
 <h3 class="important-tittle text-left">Gallery</h3>
 
-<div ng-repeat="section in sms.sections">
-    <div ng-repeat="article in section.articles">
-        <div class="row">
+<div class="row">
+    <div ng-repeat="section in sms.sections">
+        <div ng-repeat="article in section.articles">
             <div class="col-md-4 card-shadow card">
-                <img src="{{source}}/start/{{article.name}}.png"/>
+                <img src="{{source}}/start/{{article.name}}.png" />
                 <h3>{{article.name}}</h3>
                 <p>{{article.description}}</p>
             </div>
