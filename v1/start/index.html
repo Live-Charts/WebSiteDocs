@@ -1,9 +1,12 @@
 <h3 class="important-tittle text-left">Gallery</h3>
 
-<div class="row">
-    <div ng-repeat="section in sms.sections">
-        <div ng-repeat="article in section.articles">
-            <div class="col-md-4 card-shadow card">
+<div ng-repeat="section in sms.sections" class="row">
+    
+    <div class="col-xs-12">
+        <h3>{{section.name}}</h3>
+        
+        <div class="row">
+            <div ng-repeat="article in section.articles" class="col-md-4 card-shadow card">
                 <img src="{{source}}/v1/start/{{article.name}}.png" />
                 <h3>{{article.name}}</h3>
                 <p>{{article.description}}</p>
