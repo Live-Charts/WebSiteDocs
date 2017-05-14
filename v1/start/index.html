@@ -2,6 +2,10 @@
 
 <div ng-repeat="section in sms.sections">
     <div ng-repeat="article in section.articles">
-        <h3>{{article.name}}</h3>
+        <div class="col-md-3 card-shadow">
+            <img src="{{source}}/start/{{article.name}}.png"/>
+            <h3>{{article.name}}</h3>
+            <p>{{article.description}}</p>
+        </div>
     </div>
 </div>
