@@ -1,7 +1,7 @@
-<div ng-repeat="section in sms.sections" class="row">
+<div class="row">
     <div class="col-lg-10 col-lg-offset-1 col-xs-12">
         <div class="row">
-            <div ng-repeat="article in section.articles" class="col-md-4">
+            <div ng-repeat="article in sms.cards" class="col-md-4">
                 <div class="panel card-shadow">
                     <a ng-href="/App/examples/{{sms.version}}/{{sms.platform}}/{{article.name}}">
                         <div class="panel-body">
