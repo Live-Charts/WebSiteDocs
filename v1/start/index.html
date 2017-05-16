@@ -1,13 +1,13 @@
 <div class="row">
     <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-        <input class="gallery-search" type="text"/>
+        <input class="form-control" placeholder="Search in Gallery" ng-model="galleryFilter" type="text"/>
     </div>
 </div>
 
 <div class="row">
     <div class="col-lg-10 col-lg-offset-1 col-xs-12">
         <div class="row gallery-container">
-            <div ng-repeat="article in sms.cards" class="col-md-4">
+            <div ng-repeat="article in sms.cards | galleryFilter" class="col-md-4">
                 <div class="panel card-shadow gallery-card">
                     <a ng-href="/App/examples/{{sms.version}}/{{sms.platform}}/{{article.default || article.name}}"
                        ng-click="sms.closeSections(article.index);">
@@ -16,7 +16,7 @@
                                 <img ng-src="{{source}}/{{sms.version}}/start/{{sms.resolveImage(article)}}" />
                             </div>
                             <h3 class="text-warning">{{article.name}}</h3>
-                            <span class="label label-default" ng-repeat="label in article.labels.split(' ')">
+                            <span class="label label-default" ng-repeat="label in article.tags.split(' ')">
                                 {{label}}
                             </span>
                         </div>
