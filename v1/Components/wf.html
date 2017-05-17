@@ -15,20 +15,6 @@
     this brief example we are plotting double values.
 </p>
 
-<h4>Code Behind</h4>
-
-<pre class="prettyprint">myChart.Series = new SeriesCollection
-{
-    new LineSeries
-    {
-        Values = new ChartValues&lt;double> { 3, 5, 7, 4 }
-    },
-    new BarSeries                
-    {
-        Values = new ChartValues&lt;decimal> { 5, 6, 2, 7 }
-    }
-};</pre>
-
 <p>
     Simple isn't it? that is all you need, now every time you add/remove a series to the SeriesCollection instance or add/remove a value at every series, the chart will update and animate automatically.
 </p>
