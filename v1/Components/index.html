@@ -11,7 +11,7 @@
 
 <p>
     There are many types ready to plot already defined, you can learn more in the
-    <a ng-href="/App/examples/{{sms.version}}/{{sms.platform}}/Types%20and%20Configuration">Types and Configuration section</a>, in 
+    <a ng-href="/App/examples/v1/{{sms.platform}}/Types%20and%20Configuration">Types and Configuration section</a>, in 
     this brief example we are plotting double values.
 </p>
 
@@ -62,7 +62,7 @@
 </p>
 
 <div class="text-center">
-    <img ng-src="{{source}}/{{sms.version}}/Components/components.png"/>
+    <img ng-src="{{source}}/v1/Components/components.png"/>
 </div>
 
 <p>
@@ -70,13 +70,13 @@
 </p>
 
 <div class="text-center">
-    <img src="{{source}}/v1/Components/strokeandfill.png" />
+    <img ng-src="{{source}}/v1/Components/strokeandfill.png" />
 </div>
 
 <div ng-if="wpf || uwp">
     <p>
         You can set a Fill and Stroke only for a specific series, if you don't then the library will decide a color according to your 
-        <a href="/App/examples/{{version}}/{{platform}}/Themes">
+        <a ng-href="/App/examples/v1/{{sms.platform}}/Themes">
             theme
         </a>.
     </p>
@@ -133,7 +133,7 @@ System.Windows.Controls.Panel.SetZIndex(mySeries, 3);</pre>
 <div ng-if="wpf || uwp">
     <p>
         If necessary you can also define your own tooltips or legends controls,
-        <a href="/App/examples/v1/wpf/Customizing Tooltips">here</a> is an article about it
+        <a ng-href="/App/examples/v1/{{sms.platform}}/Customizing Tooltips">here</a> is an article about it
     </p>
 
     <h4>Legends</h4>
@@ -148,6 +148,6 @@ System.Windows.Controls.Panel.SetZIndex(mySeries, 3);</pre>
 <div ng-if="wf">
     <p>
         If necessary you can also define your own tooltips or legends controls,
-        <a href="/App/examples/v1/wf/Customizing Tooltips">here</a> is an article about it
+        <a ng-href="/App/examples/v1/{{sms.platform}}/Customizing Tooltips">here</a> is an article about it
     </p>
 </div>
