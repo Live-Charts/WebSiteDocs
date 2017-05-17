@@ -7,7 +7,7 @@
 <div class="row">
     <div class="col-lg-10 col-lg-offset-1 col-xs-12">
         <div class="row gallery-container">
-            <div ng-repeat="article in sms.cards | filter:galleryFilter" class="col-md-4">
+            <div ng-repeat="article in sms.cards | filter:galleryFilter" class="col-md-4 col-sm-6">
                 <div class="panel card-shadow gallery-card">
                     <a ng-href="/App/examples/{{sms.version}}/{{sms.platform}}/{{article.default || article.name}}"
                        ng-click="sms.closeSections(article.index);">
