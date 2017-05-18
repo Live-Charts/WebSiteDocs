@@ -2,17 +2,17 @@
 
 <p>
     By default every chart that requires a Tooltip or Legend, initializes a new instance of
-    <a href="/App/documentation/beta/LiveCharts-Wpf-DefaultLegend">DefaultLegend</a>  or
-    <a href="/App/documentation/beta/LiveCharts-Wpf-DefaultTooltip">DefaultTooltip</a>.
+    <a ng-href="/App/documentation/beta/{{sms.platfom}}/LiveCharts-Wpf-DefaultLegend">DefaultLegend</a>  or
+    <a ng-href="/App/documentation/beta/{{sms.platfom}}/LiveCharts-Wpf-DefaultTooltip">DefaultTooltip</a>.
 </p>
 
 <h4>Customizing defaults</h4>
 
 <p>
-    you can customize these classes, for example the background color, bullet size, or orientation, as shown in the next code snippet
+    you can customize these classes, for example the background color, bullet size, or orientation, as shown in the next block:
 </p>
 
-<pre class="prettyprint">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}">
+<pre class="prettyprint" ng-if="uwp || wpf">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}">
     &lt;lvc:CartesianChart.ChartLegend>
         &lt;lvc:DefaultLegend BulletSize="20" Background="Red"/>
     &lt;/lvc:CartesianChart.ChartLegend>
@@ -21,22 +21,28 @@
     &lt;/lvc:CartesianChart.DataTooltip>
 &lt;/lvc:CartesianChart></pre>
 
+<pre class="prettyprint" ng-if="wf">cartesianChart1.Datatooltip.Bulletize = 20;
+cartesianChart1.DataTooltip.Background = Brushes.Red;</pre>
+
 <p>
     You can also set the selection mode of your tooltip, for example with the next code we force our tooltip
     to display only the point that was hovered.
 </p>
 
-<pre class="prettyprint">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}">
+<pre class="prettyprint" ng-if="wpf || uwp">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}">
     &lt;lvc:CartesianChart.DataTooltip>
         &lt;lvc:DefaultTooltip SelectionMode="OnlySender" />
     &lt;/lvc:CartesianChart.DataTooltip>
 &lt;/lvc:CartesianChart></pre>
 
-<p>
-    An alternative example:
-</p>
+<pre class="prettyprint" ng-if="wf">cartesianChart1.DataTooltip.SelectionMode = LiveCharts.TooltipSelectionMode.OnlySender;</pre>
 
-<pre class="prettyprint">&lt;lvc:CartesianChart>
+<div ng-if="wpf || uwp">
+    <p>
+        An alternative sample:
+    </p>
+
+    <pre class="prettyprint">&lt;lvc:CartesianChart>
         &lt;lvc:CartesianChart.Resources>
             &lt;Style TargetType="lvc:DefaultTooltip">
                 &lt;Setter Property="Background" Value="DarkOrange">&lt;/Setter>
@@ -56,10 +62,11 @@
         &lt;/lvc:CartesianChart.Series>
     &lt;/lvc:CartesianChart></pre>
 
-<p>Would result in the following tooltip</p>
+    <p>Would result in the following tooltip</p>
 
-<div class="text-center">
-    <img src="/App/Examples/v1/Tooltips And Legends/Images/customtooltip.gif"/>
+    <div class="text-center">
+        <img ng-src="{{source}}/v1/Tooltips And Legends/customtooltip.gif"/>
+    </div>
 </div>
 
 <h4>From Scratch</h4>
@@ -69,20 +76,26 @@
     modifying the way the data is displayed in the tooltip, or showing extra properties in your tooltips?
 </p>
 
+<div class="doc-alert" ng-if="wf">
+    Sadly there is not a native way to do this in WinForms, since LiveCharts.Winforms is actually a wrapper
+    for LieCharts.Wpf you must create a Wpf UserControl to make this work, it is easy and you don't
+    really need advanced knowledge about WPF to make it work.
+</div>
+
 <p>
-    The <i class="text-muted">DefaultTooltip</i> and <i class="text-muted">DefaultLegend</i> classes try to work for all cases, if you need a specialized
-    component you can easily define your own, the logic is the next, you create a custom UserControl,
+    The <i>DefaultTooltip</i> and <i>DefaultLegend</i> classes are designed to work for all cases, if you need a specialized
+    component you can define your own, the logic is the next, you create a custom UserControl,
     LiveCharts will inject the data the user needs to see in the tooltip, and you need to handle how to
     display this data according to your needs, you can do everything you know about WPF to make it work.
 </p>
 
 <p>
-    In the next example we will configure our chart to plot <i class="text-muted">CustomerVm</i> class,
+    In the next sample, we will configure our chart to plot <i>CustomerVm</i> class,
     and we will build a custom tooltip to show more properties about our customers.
 </p>
 
 <div class="text-center">
-    <img src="/App/Examples/v1/Tooltips And Legends/Images/Customizing Tooltips.jpg"/>
+    <img ng-src="{{source}}/v1/Tooltips And Legends/Customizing Tooltips.jpg"/>
 </div>
 
 <div class="doc-alert">
@@ -118,22 +131,23 @@
 <pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomersTooltip.xaml.cs"></pre>
 
 <p>
-    The important parts there is that CustomersTooltip implements <i class="text-muted">IChartTooltip</i>
-    this interface requires our user control to Implement <i class="text-muted">INotifyPropertyChanged</i>
-    and a new property <i class="text-muted">Data</i> of type <a href="/App/documentation/beta/LiveCharts-Wpf-TooltipData">TooltipData</a>,
+    The important part there is that CustomersTooltip implements <i>IChartTooltip</i>
+    this interface requires our <i>UserControl</i> to Implement <i>INotifyPropertyChanged</i>
+    and a new property <i>Data</i> of type 
+    <a ng-href="/App/documentation/beta/{{sms-platform}}/LiveCharts-Wpf-TooltipData">TooltipData</a>,
     LiveCharts will inject all it knows about the current points to show in the tooltip, your job is to
     display this data as you require.
 </p>
 
 <p>
-    Notice we used the <i class="text-muted">DataContext</i> property of the user control, and binded
-    the <i class="text-muted">Data.Points</i> property to our <i class="text-muted">ItemsControl</i>
+    Notice we used the <i>DataContext</i> property of the <i>UserControl</i>, and binded
+    the <i>Data.Points</i> property to our <i>ItemsControl</i>
     to display the current points as we need.
 </p>
 
 <p>
-    Lets also create a simple custom Legend, with a custom style, add another User control and name it
-    <i>CustomersLegend</i>, the logic is the same as the custom tooltip, you implement <i class="text-muted">IChartLegend</i>
+    Lets also create a simple custom Legend, with a custom style, add another user control and name it
+    <i>CustomersLegend</i>, the logic is the same as the custom tooltip, you implement <i>IChartLegend</i>
     then you handle the injected data by LiveCharts
 </p>
 
@@ -142,7 +156,7 @@
 <pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomersLegend.xaml.cs"></pre>
 
 <p>
-    Finally lets set this customs controls to our chart.
+    Finally let's set this customs controls to our chart.
 </p>
 
 <div class="doc-alert">
