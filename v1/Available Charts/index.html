@@ -1,7 +1,7 @@
 ﻿<h3 class="important-tittle">Available Charts</h3>
 
 <p>
-    LiveCharts has 5 main charts, you will find how and when to use any of these objects in the next examples.
+    LiveCharts has 5 main controls:
 </p>
 
 <ol style="list-style: none; padding: 0">
@@ -81,11 +81,13 @@
 
         <pre class="prettyprint">using LiveCharts;
 using LiveCharts.Defaults; //Contains the already defined types
+
 LiveCharts.SeriesCollection series = new LiveCharts.SeriesCollecion 
 {
   new LineSeries
   {
     //The ObservableValue class notifies the chart to update when value changes
+
     Values = new ChartValues&lt;LiveCharts.Defaults.ObservableValue&gt;
     {
         new LiveCharts.Defaults.ObservableValue(4),

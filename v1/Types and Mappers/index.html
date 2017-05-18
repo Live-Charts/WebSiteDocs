@@ -1,4 +1,4 @@
-﻿<h3 class="important-tittle">Types and Configuration</h3>
+﻿<h3 class="important-tittle">Types and Mappers</h3>
 
 <p>
     LiveCharts can plot any type, even user-defined types, without losing the beauty of a strongly typed language,
@@ -153,7 +153,7 @@ LiveCharts.Charting.For&lt;int>(verticalMapper, SeriesOrientation.Vertical);</pr
 </p>
 
 <p>
-    There are many types of mappers:
+    There are many types of mappers that help you to configure every series:
 </p>
 
 <pre class="prettyprint">//X and Y
@@ -181,7 +181,7 @@ var mapper = Mappers.Financial&lt;OhlcPoint>()
                 .Close(value => value.Close);</pre>
 
 <p>
-    You can set s mapper in several ways
+    You can set a mapper in several ways
 </p>
 
 <h4>1. Globally</h4>
@@ -206,9 +206,10 @@ LiveCharts.Charting.For&lt;int&gt;(mapper2, SeriesOrientation.Vertical); //when 
     also notice this time I am using the same configuration for both, Horizontal and Vertical, without passing the second argument (Orientation).
 </p>
 
-<pre class="prettyprint">For&lt;ObservablePoint&gt;(Mappers.Xy&lt;ObservablePoint&gt;()
+<pre class="prettyprint">var mapper = Mappers.Xy&lt;ObservablePoint&gt;()
   .X((value, index) =&gt; value.X) 
-  .Y(value =&gt; value.Y));</pre>
+  .Y(value =&gt; value.Y);
+LiveCharts.Charting.For&lt;ObservablePoint&gt;(mapper);</pre>
 
 <p>
     If this is not clear enough you find a more detailed explanation at the <a href="https://github.com/beto-rodriguez/Live-Charts/blob/master/Core/Charting.cs#L43">source code</a>
@@ -233,42 +234,3 @@ myChart.SeriesCollection = seriesCollection;</pre>
 
 <pre class="prettyprint">var mapper = Mappers.Xy&lt;MyClass&gt;().X(v => v.XProp).Y(v => v.YProp);
 var pieSeries = new PieSeries(mapper);</pre>
-
-<h3>Notify the chart to update automatically</h3>
-
-<p>
-    You can also implement <i>IObservableChartPoint</i>, so the chart will update automatically when a property
-    of a custom type changes, in the next example you will see definition of the <i>ObservableValue</i> class,
-    which notifies the chart to update when the <i>Value</i> property changes, the concept is really simple,
-    you only need to invoke the <i>PointChanged</i> event every time the <i>Value</i> property is set.
-</p>
-
-<pre class="prettyprint">public class ObservableValue : IObservableChartPoint
-{
-    private double _value;
-    public ObservableValue()
-    {
-            
-    }
-
-    public ObservableValue(double value)
-    {
-        Value = value;
-    }
- 
-   public event Action PointChanged;
-   public double Value
-   {
-       get { return _value; }
-       set
-       {
-           _value = value;
-           OnPointChanged();
-       }
-   }
- 
-   protected void OnPointChanged()
-   {
-       if (PointChanged != null) PointChanged.Invoke();
-   }
-}</pre>
