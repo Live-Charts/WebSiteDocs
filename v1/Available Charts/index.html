@@ -1,9 +1,5 @@
 ﻿<h3 class="important-tittle">Available Charts</h3>
 
-<p>
-    LiveCharts has 5 main controls:
-</p>
-
 <ol style="list-style: none; padding: 0">
     <li>
         <h3>1. CartesianChart</h3>
@@ -11,72 +7,65 @@
         <p>
             The <i>Cartesian Chart</i> class allows you to plot any series that uses a
             <i>Cartesian coordinate system</i>, every point is a pair of values (<i>X</i>, <i>Y</i>),
-            then how is LiveCharts able to plot <i>ChartValues&lt;double&gt;</i> if I only passed a value?
-            simple, in simple terms <i>Y</i> will be the value you passed, and <i>X</i> the index of the value in
-            the array, if you want to learn more about how LiveCharts works, you can read
-            <a href="/App/examples/v1/wpf/Types and Configuration">this</a>.
-        </p>
-
-        <p>
-            The Cartesian chart supports many series, you can combine any of these series in a Cartesian chart:
+            it supports many series, you can combine any of these seriesin the same plot:
         </p>
 
         <div class="row spaced">
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
                 <div>Line Series</div>
-                <img src="/App/Examples/v1/Available Charts/Images/lineSeries.jpg" />
+                <img ng-src="{{source}}/App/Examples/v1/Available Charts/lineSeries.jpg" />
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
                 <div>Vertical Line Series</div>
-                <img src="/App/Examples/v1/Available Charts/Images/verticallineseries.jpg" />
+                <img ng-src="{{source}}/App/Examples/v1/Available Charts/verticallineseries.jpg" />
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
                 <div>Column Series</div>
-                <img src="/App/Examples/v1/Available Charts/Images/columnseries.jpg" />
+                <img ng-src="{{source}}/App/Examples/v1/Available Charts/columnseries.jpg" />
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
                 <div>Row Series</div>
-                <img src="/App/Examples/v1/Available Charts/Images/rowseries.jpg" />
+                <img ng-src="{{source}}/App/Examples/v1/Available Charts/rowseries.jpg" />
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
                 <div>Stacked Area Series</div>
-                <img src="/App/Examples/v1/Available Charts/Images/stackedareaseries.jpg" />
+                <img ng-src="{{source}}/App/Examples/v1/Available Charts/stackedareaseries.jpg" />
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
                 <div>Vertical Stacked Area Series</div>
-                <img src="/App/Examples/v1/Available Charts/Images/verticalstackedareaseries.jpg" />
+                <img ng-src="{{source}}/App/Examples/v1/Available Charts/verticalstackedareaseries.jpg" />
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
                 <div>Stacked Column Series</div>
-                <img src="/App/Examples/v1/Available Charts/Images/stackedcolumnseries.jpg" />
+                <img ng-src="{{source}}/App/Examples/v1/Available Charts/stackedcolumnseries.jpg" />
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
                 <div>Stacked Row Series</div>
-                <img src="/App/Examples/v1/Available Charts/Images/stackedrowsseries.jpg" />
+                <img ng-src="{{source}}/App/Examples/v1/Available Charts/stackedrowsseries.jpg" />
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
                 <div>Heat Series</div>
-                <img src="/App/Examples/v1/Available Charts/Images/Heat Series.jpg" />
+                <img ng-src="{{source}}/App/Examples/v1/Available Charts/Heat Series.jpg" />
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-                <div>OHCL Series (Financial)</div>
-                <img src="/App/Examples/v1/Available Charts/Images/ohclseries.jpg" />
+                <div>OHCLand Candle Series</div>
+                <img ng-src="{{source}}/App/Examples/v1/Available Charts/ohclseries.jpg" />
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
                 <div>Bubbles Series</div>
-                <img src="/App/Examples/v1/Available Charts/Images/buubleseries.jpg" />
+                <img ng-src="{{source}}/App/Examples/v1/Available Charts/buubleseries.jpg" />
             </div>
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
                 <div>StepLine Series</div>
-                <img src="/App/Examples/v1/Available Charts/Images/stepline.png" />
+                <img ng-src="{{source}}/App/Examples/v1/Available Charts/stepline.png" />
             </div>
         </div>
 
         <p>
             Here is an example, notice some series use a specialized
             point, LiveCharts already knows how to plot many types, if you need to define your own,
-            please take a read <a href="/App/examples/v1/wpf/Types and Configuration">here</a>, it is
-            pretty easy.
+            please take a read at 
+            <a href="{{source}}/App/examples/v1/{{sms.platform}}/Types and Configuration">Types and Mappers</a> article.
         </p>
 
         <pre class="prettyprint">using LiveCharts;
