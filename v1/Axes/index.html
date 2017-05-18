@@ -1,17 +1,17 @@
 ﻿<h3 class="important-tittle">Customizing Axis</h3>
 
 <p>
-    Practically you can custom everything in LiveCharts and axes are not the exception, the next image illustrates an axis.
+    You can practically custom everything in LiveCharts and axes are not the exception, the next image illustrates an axis:
 </p>
 
 <div class="text-center">
-    <img src="/App/Examples/v1/Axes/Images/axis explain.jpg"/>
+    <img ng-src="{{source}}/App/Examples/v1/Axes/axis explain.jpg"/>
 </div>
 
 <h4>Title</h4>
 
 <p>
-    Use the <i class="text-muted">Title</i> property to add a label an axis.
+    Use the <i>Title</i> property to add a label an axis.
 </p>
 
 <pre class="prettyprint">myAxis.Title = "Population"</pre>
@@ -25,20 +25,22 @@
 </p>
 
 <div class="text-center">
-    <img src="https://cloud.githubusercontent.com/assets/10853349/14399794/dfda95b0-fdb5-11e5-8504-6df683434e1b.png"/>
+    <img ng-src="{{source}}/App/Examples/v1/Axes/merged axis.png" />
 </div>
 
 <h4>Axes positioning</h4>
 
 <p>
     No matter if you have 1 or 10 axes, you could always specify where the axis is stacked, using the
-    <i class="text-muted">Axis.Position</i> property, option are <i class="text-muted">RightTop, LeftBottom</i>
+    <i>Axis.Position</i> property, options are <i>RightTop, LeftBottom</i>.
 </p>
 
-<pre class="prettyprint">&lt;lvc:Axis Position="RightTop" /></pre>
+<pre class="prettyprint" ng-if="wpf || uwp">&lt;lvc:Axis Position="RightTop" /></pre>
+
+<pre class="prettyprint" ng-if="wf">new Axis { Position = Position = AxisPosition.LeftBottom }</pre>
 
 <div class="text-center">
-    <img src="/App/Examples/v1/Multiple Axes/Images/multiax.jpg"/>
+    <img ng-src="/App/Examples/v1/Multiple Axes/multiax.jpg"/>
 </div>
 
 <h4>Forcing the separator Step</h4>
@@ -61,7 +63,7 @@
     <b>Forcing step to 1 unit</b>
 </p>
 
-<pre class="prettyprint">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}" >
+<pre class="prettyprint" ng-if="wpf || uwp">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}" >
   &lt;lvc:CartesianChart.AxisX>
     &lt;lvc:Axis Labels="{Binding Labels}">
       &lt;lvc:Axis.Separator>
@@ -74,12 +76,21 @@
   &lt;/lvc:CartesianChart.AxisY>
 &lt;/lvc:CartesianChart></pre>
 
+<pre class="prettyprint" ng-if="wf">new Axis
+{
+    Separator = new Separator
+    {
+        Step = 1,
+        IsEnabled = false
+    }
+}</pre>
+
 <p>
     <b>Forcing step when using DateTime</b> 30 second in this case, you can find help about using date time
-    in the <a href="/App/examples/v1/uwp/Date%20Time">DateTime article</a>
+    in the <a href="/App/examples/v1/wpf/Date%20Time">DateTime article</a>
 </p>
 
-<pre class="prettyprint">//Code Behind
+<pre class="prettyprint" ng-if="wpf || uwp">//Code Behind
 Step = TimeSpan.FromSeconds(30).Ticks;
 
 //XAML
@@ -97,10 +108,19 @@ Step = TimeSpan.FromSeconds(30).Ticks;
 &lt;/lvc:CartesianChart>
 </pre>
 
+<pre class="prettyprint" ng-if="wf">new Axis
+{
+    Separator = new Separator
+    {
+        Step = TimeSpan.FromSeconds(30).Ticks,
+        IsEnabled = false
+    }
+}</pre>
+
 <h4>Styling Separators</h4>
 
 <p>
-    notice setting <i class="text-muted">Axis.Separator.IsEnabled</i> property to false will make
+    Notice setting <i>Axis.Separator.IsEnabled</i> property to false will make
     the separator invisible.
 </p>
 
@@ -108,7 +128,7 @@ Step = TimeSpan.FromSeconds(30).Ticks;
     <img src="/App/Examples/v1/About Series/Images/custom-line.jpg"/>
 </div>
 
-<pre class="prettyprint">&lt;lvc:CartesianChart Background="#222E31">
+<pre class="prettyprint" ng-if="wpf || uwp">&lt;lvc:CartesianChart Background="#222E31">
   &lt;lvc:CartesianChart.Series>
     &lt;lvc:LineSeries Values="{Binding Values1}" />
     &lt;lvc:LineSeries Values="{Binding Values2}" />
@@ -136,5 +156,27 @@ Step = TimeSpan.FromSeconds(30).Ticks;
     &lt;/lvc:Axis>
   &lt;/lvc:CartesianChart.AxisY>
 &lt;/lvc:CartesianChart></pre>
+
+<pre class="prettyprint" ng-if="wf">cartesianChart1.AxisX.Add(new Axis
+{
+   IsMerged = true,
+   Separator = new Separator
+   {
+      StrokeThickness = 1,
+      StrokeDashArray = new System.Windows.Media.DoubleCollection(new double[] { 2 }),
+      Stroke = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(64, 79, 86))
+   }
+});
+
+cartesianChart1.AxisY.Add(new Axis
+{
+   IsMerged = true,
+   Separator = new Separator
+   {
+      StrokeThickness = 1.5,
+      StrokeDashArray = new System.Windows.Media.DoubleCollection(new double[] { 4 }),
+      Stroke = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(64, 79, 86))
+   }
+});</pre>
 
 
