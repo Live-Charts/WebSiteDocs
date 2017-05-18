@@ -1,4 +1,4 @@
-﻿<h3 class="important-tittle">Customizing Axis</h3>
+﻿<h3 class="important-tittle">Axes</h3>
 
 <p>
     You can practically custom everything in LiveCharts and axes are not the exception, the next image illustrates an axis:
@@ -8,7 +8,7 @@
     <img ng-src="{{source}}/v1/Axes/axis explain.jpg"/>
 </div>
 
-<h4>Title</h4>
+<h4>1. Title</h4>
 
 <p>
     Use the <i>Title</i> property to add a label an axis.
@@ -16,78 +16,49 @@
 
 <pre class="prettyprint">myAxis.Title = "Population"</pre>
 
-<h4>Merged Axes</h4>
+<h4>2. Separators</h4>
 
 <p>
-    When you need to save some space, merge any axis in the chart, try using the
-    <i class="text-muted">Axis.IsMerged</i> property to true, the next image shows a merged
-    axis (left) vs a normal axis (right)
-</p>
-
-<div class="text-center">
-    <img ng-src="{{source}}/v1/Axes/merged axis.png" />
-</div>
-
-<h4>Axes positioning</h4>
-
-<p>
-    No matter if you have 1 or 10 axes, you could always specify where the axis is stacked, using the
-    <i>Axis.Position</i> property, options are <i>RightTop, LeftBottom</i>.
-</p>
-
-<pre class="prettyprint" ng-if="wpf || uwp">&lt;lvc:Axis Position="RightTop" /></pre>
-
-<pre class="prettyprint" ng-if="wf">new Axis { Position = Position = AxisPosition.LeftBottom }</pre>
-
-<div class="text-center">
-    <img ng-src="/v1/Multiple Axes/multiax.jpg"/>
-</div>
-
-<h4>Forcing the separator Step</h4>
-
-<p>
-    Every axis separator is calculated automatically according to the chart size, and values range,
-    but some times you need a static separator step, for example every 30 seconds, or every 10 units,
-    another useful application is when you need to display all the labels, in this case setting the step
-    to 1 will force the chart to draw all the labels, finally to remove any step you can set it
-    back to <i class="text-muted">null</i>, and it will be calculated automatically.
+    You can find an illustrator of a separator at the top of this article, you can specify
+    the distance between each separator using the <i>Axis.Separator.Step</i> property, when
+    this property is equals to <i>double.NaN</i> the library will calculate the distance automatically
+    based on your charts size and the range of values in your current <i>Axis</i>.
 </p>
 
 <p>
-    <b>Warning!</b> Be careful when forcing steps, it could result in horrible performance issues,
-    if not used correctly, for example if your current range of values goes from 0 to 1,000 and you 
-    set the step to 1 the chart will draw 1,000 separators too.
+    When the <i>Axis.Separator.IsEnabled</i> property is equals to <i>false</i>, then LiveCharts will
+    not draw the separator, notice that disabling the separator is not enough to hide the labels of an axis,
+    you can use the <i>Axis.ShowLabels</i> property to specify whether an axis should draw its labels. 
 </p>
 
-<p>
-    <b>Forcing step to 1 unit</b>
-</p>
+<pre class="prettyprint" ng-if="wpf || uwp">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}"&gt;
+  &lt;lvc:CartesianChart.AxisX&gt;
+    &lt;lvc:Axis ShowLabels="false"&gt;
+      &lt;lvc:Axis.Separator&gt;
+        &lt;lvc:Separator IsEnabled="False" Step="1" /&gt;
+        &lt;/lvc:Axis.Separator&gt;
+      &lt;/lvc:Axis&gt;
+    &lt;/lvc:CartesianChart.AxisX&gt;
+  &lt;lvc:CartesianChart.AxisY&gt;
+&lt;/lvc:CartesianChart&gt;</pre>
 
-<pre class="prettyprint" ng-if="wpf || uwp">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}" >
-  &lt;lvc:CartesianChart.AxisX>
-    &lt;lvc:Axis Labels="{Binding Labels}">
-      &lt;lvc:Axis.Separator>
-        &lt;lvc:Separator IsEnabled="False" Step="1">&lt;/lvc:Separator>
-      &lt;/lvc:Axis.Separator>
-    &lt;/lvc:Axis>
-  &lt;/lvc:CartesianChart.AxisX>
-  &lt;lvc:CartesianChart.AxisY>
-    &lt;lvc:Axis Title="Sold Items" LabelFormatter="{Binding Formatter}">&lt;/lvc:Axis>
-  &lt;/lvc:CartesianChart.AxisY>
-&lt;/lvc:CartesianChart></pre>
-
-<pre class="prettyprint" ng-if="wf">new Axis
+<pre class="prettyprint" ng-if="wf">cartesianChart1.AxisX.Add(new LiveCharts.Wpf.Axis
 {
-    Separator = new Separator
-    {
-        Step = 1,
-        IsEnabled = false
-    }
-}</pre>
+   Separator = new Separator 
+   {
+     Step = 1,
+     IsEnabled = false
+   }
+});</pre>
 
 <p>
-    <b>Forcing step when using DateTime</b> 30 second in this case, you can find help about using date time
-    in the <a ng-href="/App/examples/v1/{{sms.platform}}/Date%20Time">DateTime article</a>
+    <b>Warning!</b> Be careful when forcing steps, it could result in performance issues,
+    if not used correctly, if your current range of values goes from 0 to 1,000 and you
+    set the step to 1, the chart will draw 1,000 separators too.
+</p>
+
+<p>
+    In the next block, we are forcing our separator's step to 30 seconds:
 </p>
 
 <pre class="prettyprint" ng-if="wpf || uwp">//Code Behind
@@ -117,7 +88,7 @@ Step = TimeSpan.FromSeconds(30).Ticks;
     }
 }</pre>
 
-<h4>Styling Separators</h4>
+<h4>2.1 Styling Separators</h4>
 
 <p>
     Notice setting <i>Axis.Separator.IsEnabled</i> property to false will make
@@ -125,7 +96,7 @@ Step = TimeSpan.FromSeconds(30).Ticks;
 </p>
 
 <div class="text-center">
-    <img ng-src="{{source}}/v1/About Series/custom-line.jpg"/>
+    <img ng-src="{{source}}/v1/About Series/custom-line.jpg" />
 </div>
 
 <pre class="prettyprint" ng-if="wpf || uwp">&lt;lvc:CartesianChart Background="#222E31">
@@ -178,5 +149,33 @@ cartesianChart1.AxisY.Add(new Axis
       Stroke = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Color.FromRgb(64, 79, 86))
    }
 });</pre>
+
+<h4>3. Merged Axes</h4>
+
+<p>
+    When you need to save some space, merge any axis in the chart, try using the
+    <i class="text-muted">Axis.IsMerged</i> property to true, the next image shows a merged
+    axis (left) vs a normal axis (right)
+</p>
+
+<div class="text-center">
+    <img ng-src="{{source}}/v1/Axes/merged axis.png" />
+</div>
+
+<h4>4. Axes positioning</h4>
+
+<p>
+    No matter if you have 1 or 10 axes, you could always specify where the axis is stacked, using the
+    <i>Axis.Position</i> property, options are <i>RightTop, LeftBottom</i>.
+</p>
+
+<pre class="prettyprint" ng-if="wpf || uwp">&lt;lvc:Axis Position="RightTop" /></pre>
+
+<pre class="prettyprint" ng-if="wf">new Axis { Position = Position = AxisPosition.LeftBottom }</pre>
+
+<div class="text-center">
+    <img ng-src="{{source}}/v1/Multiple Axes/multiax.jpg"/>
+</div>
+
 
 

@@ -116,8 +116,7 @@ MyAxis.LabelFormatter = val => val + ".00 items sold"; //or any other custom for
     You can use any angle, even negatives.
 </p>
 
-<pre class="prettyprint" ng-if="wpf || uwp">
-&lt;lvc:CartesianChart Grid.Row="2" Series="{Binding SeriesCollection}"&gt;
+<pre class="prettyprint" ng-if="wpf || uwp">&lt;lvc:CartesianChart Grid.Row="2" Series="{Binding SeriesCollection}"&gt;
   &lt;lvc:CartesianChart.AxisX&gt;
     &lt;lvc:Axis LabelsRotation="13" Labels="{Binding Labels}"&gt;
       &lt;lvc:Axis.Separator&gt;
