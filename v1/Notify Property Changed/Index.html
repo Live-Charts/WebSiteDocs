@@ -1,0 +1,83 @@
+<h3 class="important-tittle">INotifyPropertyChanged</h3>
+
+<p>
+    When you require a point to update automatically when a property changes, you must
+    implement <i class="text-muted">INotifyPropertyChanged</i>, this interface is provided
+    by the .Net framework, in this article we are building <i class="text-muted">ObservableValue</i>
+    class from scratch, notice this class is already defined in the library,
+    INotifyPropertyChanged is a common component of .Net framework, if you want to learn more
+    about it, the web is full of articles, basically in rises an event every time a property changes.
+</p>
+
+<p>
+    Create a new class named <i class="text-muted">ObservableValue</i>, and add a property named 
+    <i class="text-muted">Value</i>
+</p>
+
+<pre class="prettyprint">public class ObservableValue
+{
+    private double _value;
+
+    public double Value
+    {
+        get { return _value; }
+        set
+        {
+            _value = value;
+        }
+    }
+}</pre>
+
+<p>
+    Then implement <i class="text-muted">INotifyPropertyChanged</i>.
+</p>
+
+<pre class="prettyprint">public class ObservableValue : INotifyPropertyChanged //added INotifyPropertyChanged
+{
+    private double _value;
+
+    public double Value
+    {
+        get { return _value; }
+        set
+        {
+            _value = value;
+            OnPropertyChanged("Value");
+        }
+    }
+
+    #region INotifyPropertyChangedImplementation
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    protected virtual void OnPropertyChanged(string propertyName = null)
+    {
+        if (PropertyChanged != null) 
+            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+
+    #endregion
+}</pre>
+
+<p>
+    Since this type is already defined in the library, do not forget that it has a mapper saved already,
+    it is really simple, this mapper teach LiveCharts how it should pull out the X and Y 
+    coordinates:
+</p>
+
+<pre class="prettyprint">var mapper = Mappers.Xy&lt;ObservableValue>()
+    .X((instance, index) => index)  // pull the index as our X coordinate
+    .Y((instance, index) => instance.Value); // use the Value property as Y
+
+// Finally we save the mapper globally
+LiveCharts.Charting.For&lt;ObservableValue>(mapper);</pre>
+
+<p>
+    And that's it, now the library knows how to plot the 
+    <i class="text-muted">ObservableValue</i> object,and this object also notifies
+    the chart to update every time the <i class="text-muted">Value</i> property
+    changes.
+</p>
+
+
+
