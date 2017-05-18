@@ -5,7 +5,7 @@
 </p>
 
 <div class="text-center">
-    <img ng-src="{{source}}/App/Examples/v1/Axes/axis explain.jpg"/>
+    <img ng-src="{{source}}/v1/Axes/axis explain.jpg"/>
 </div>
 
 <h4>Title</h4>
@@ -25,7 +25,7 @@
 </p>
 
 <div class="text-center">
-    <img ng-src="{{source}}/App/Examples/v1/Axes/merged axis.png" />
+    <img ng-src="{{source}}/v1/Axes/merged axis.png" />
 </div>
 
 <h4>Axes positioning</h4>
@@ -40,7 +40,7 @@
 <pre class="prettyprint" ng-if="wf">new Axis { Position = Position = AxisPosition.LeftBottom }</pre>
 
 <div class="text-center">
-    <img ng-src="/App/Examples/v1/Multiple Axes/multiax.jpg"/>
+    <img ng-src="/v1/Multiple Axes/multiax.jpg"/>
 </div>
 
 <h4>Forcing the separator Step</h4>
@@ -87,7 +87,7 @@
 
 <p>
     <b>Forcing step when using DateTime</b> 30 second in this case, you can find help about using date time
-    in the <a href="/App/examples/v1/wpf/Date%20Time">DateTime article</a>
+    in the <a ng-href="/App/examples/v1/{{sms.platform}}/Date%20Time">DateTime article</a>
 </p>
 
 <pre class="prettyprint" ng-if="wpf || uwp">//Code Behind
@@ -125,7 +125,7 @@ Step = TimeSpan.FromSeconds(30).Ticks;
 </p>
 
 <div class="text-center">
-    <img src="/App/Examples/v1/About Series/Images/custom-line.jpg"/>
+    <img ng-src="{{source}}/v1/About Series/custom-line.jpg"/>
 </div>
 
 <pre class="prettyprint" ng-if="wpf || uwp">&lt;lvc:CartesianChart Background="#222E31">
