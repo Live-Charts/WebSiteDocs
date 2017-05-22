@@ -18,8 +18,6 @@ Or go to the Solution Explorer, right click on references, then Manage NuGet Pac
 Browse for **LiveCharts.Wpf{ ?wpf }** **LiveCharts.Uwp{ ?uwp }** **LiveCharts.WinForms{ ?wf }** 
 select the package and click on install.
 
-![]()
-
 ![]({{source}}/v1/Install/browseNuget.png)
 
 Add namespace to your XAML{ ?wpf||uwp }
