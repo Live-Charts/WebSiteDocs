@@ -43,7 +43,7 @@ using LiveCharts.Uwp;
 ```
 
 Notice the WinForms version is based on WPF rendering engine, so you are running 
-the WPF package with a wrapper for Windows Forms, therefore you need 3 namespaces
+the WPF package with a wrapper for Windows Forms, therefore you need 3 namespaces{?wf}
 
 ```{?wf}
 using LiveCharts; //Core of the library
