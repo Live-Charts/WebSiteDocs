@@ -13,7 +13,7 @@ Install using the <a href="https://docs.nuget.org/ndocs/tools/package-manager-co
 
 Or go to the Solution Explorer, right click on references, then Manage NuGet Packages...
 
-![]({{source}}/v1/Install/managenuget.png)
+![](/v1/Install/managenuget.png)
 
 Browse for **LiveCharts.Wpf{ ?wpf }** **LiveCharts.Uwp{ ?uwp }** **LiveCharts.WinForms{ ?wf }** 
 select the package and click on install.
