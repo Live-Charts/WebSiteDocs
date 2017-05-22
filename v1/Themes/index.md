@@ -1,4 +1,4 @@
-﻿<h3 class="important-tittle">Themes</h3>
+﻿# Themes
 
 <div ng-if="uwp || wf">
     <div class="doc-alert">

@@ -1,4 +1,4 @@
-﻿<h3 class="important-tittle">Available Charts</h3>
+﻿# Available Charts
 
 <ol style="list-style: none; padding: 0">
     <li>
