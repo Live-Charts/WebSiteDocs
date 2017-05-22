@@ -1,16 +1,13 @@
-﻿<h3 class="important-tittle"> Install</h3>
+﻿# Install
 
-<div class="doc-alert" ng-if="platform == 'uwp'">
-    UWP does not support all the features WPF does yet.
-</div>
+UWP does not support all the features WPF does yet.{ng-if=uwp}
 
 <div class="doc-alert">
-    This article is built using visual studio 2015, off-line installation help? <a href="http://stackoverflow.com/questions/8120289/is-there-a-way-to-download-packages-from-nuget-org-then-do-an-offline-installati">here</a>
+    This article was built using visual studio 2015, off-line installation help? 
+    <a href="http://stackoverflow.com/questions/8120289/is-there-a-way-to-download-packages-from-nuget-org-then-do-an-offline-installati">here</a>
 </div>
 
-<p>
-    Install using the <a href="https://docs.nuget.org/ndocs/tools/package-manager-console#installing-a-package">package manager console</a>
-</p>
+Install using the <a href="https://docs.nuget.org/ndocs/tools/package-manager-console#installing-a-package">package manager console</a>:{}
 
 <div class="row">
     <div class="col-md-offset-2 col-md-8 col-xs-12">
@@ -24,9 +21,7 @@
     </div>
 </div>
 
-<p>
-    Or go to the Solution Explorer, right click on references, then Manage NuGet Packages…
-</p>
+Or go to the Solution Explorer, right click on references, then Manage NuGet Packages…
 
 <div class="text-center">
     <img src="{{source}}/v1/Install/managenuget.png" />
