@@ -1,6 +1,6 @@
 ﻿# Install
 
-UWP does not support all the features WPF does yet.{ng-if=uwp}
+UWP does not support all the features WPF does yet.{?wpf, .doc-alert}
 
 <div class="doc-alert">
     This article was built using visual studio 2015, off-line installation help? 
