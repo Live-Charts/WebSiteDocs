@@ -76,83 +76,46 @@ The *DefaultTooltip* and *DefaultLegend* classes are designed to work for all ca
 
 In the next sample, we will configure our chart to plot *CustomerVm* class, and we will build a custom tooltip to show more properties about our customers.
 
-![]()
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/Customizing%20Tooltips.jpg)
 
-<div class="text-center">
-    <img ng-src="{{source}}/v1/Tooltips and Legends/Customizing Tooltips.jpg"/>
-</div>
+<pulled-sample platform="{{platform}}"></pulled-sample>
 
-<div class="doc-alert">
-    To keep this example always up to date it is directly pulled from the Github repository, the
-    repo for simplicity uses the <i>UserControl</i> class to wrap every example, but you can use any
-    container for your plots.
-</div>
+Right click in your solution explorer, Add -> New Item -> Browse for Class, name the file CustomerVm.cs and replace the generated file content with:
 
-<p>
-    Right click in your solution explorer, Add -> New Item -> Browse for Class, name the file CustomerVm.cs 
-    and replace the generated file content with:
-</p>
+```{!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomerVM.cs}
+```
 
-<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomerVM.cs"></pre>
+Now we are going to build our own DataTooltip, this tooltip will display all the *CustomerVm* properties, Right click in your solution explorer Add -> New Item -> Browse for *User Control (WPF)*, name the UserControl CustomersTooltip.
 
-<p>
-    OK, now we are going to build our own DataTooltip, this tooltip will display all the
-    <i class="text-muted">CustomerVm</i> properties, Right click in your solution explorer
-    Add -> New Item -> Browse for <i class="text-muted">User Control (WPF)</i>, name the UserControl
-    CustomersTooltip.
-</p>
+Replace CustomersTooltip.xaml with:
 
-<p>
-    Replace CustomersTooltip.xaml with:
-</p>
+```{!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomersTooltip.xaml}
+```
 
-<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomersTooltip.xaml"></pre>
+And the code behind of the user control (CustomersTooltip.xaml.cs)
 
-<p>
-    And the code behind of the user control (CustomersTooltip.xaml.cs)
-</p>
+```{!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomersTooltip.xaml.cs}
+```
 
-<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomersTooltip.xaml.cs"></pre>
+The important part there is that CustomersTooltip implements*IChartTooltip* this interface requires our *UserControl* to Implement *INotifyPropertyChanged* and a new property *Data* of type <a ng-href="/App/documentation/beta/{{sms-platform}}/LiveCharts-Wpf-TooltipData">TooltipData</a>, LiveCharts will inject all it knows about the current points to show in the tooltip, your job is to display this data as you require.
 
-<p>
-    The important part there is that CustomersTooltip implements <i>IChartTooltip</i>
-    this interface requires our <i>UserControl</i> to Implement <i>INotifyPropertyChanged</i>
-    and a new property <i>Data</i> of type 
-    <a ng-href="/App/documentation/beta/{{sms-platform}}/LiveCharts-Wpf-TooltipData">TooltipData</a>,
-    LiveCharts will inject all it knows about the current points to show in the tooltip, your job is to
-    display this data as you require.
-</p>
+Notice we used the *DataContext* property of the *UserControl*, and binded the *Data.Points* property to our *ItemsControl* to display the current points as we need.
 
-<p>
-    Notice we used the <i>DataContext</i> property of the <i>UserControl</i>, and binded
-    the <i>Data.Points</i> property to our <i>ItemsControl</i>
-    to display the current points as we need.
-</p>
+Lets also create a simple custom Legend, with a custom style, add another user control and name it *CustomersLegend*, the logic is the same as the custom tooltip, you implement *IChartLegend* then you handle the injected data by LiveCharts
 
-<p>
-    Lets also create a simple custom Legend, with a custom style, add another user control and name it
-    <i>CustomersLegend</i>, the logic is the same as the custom tooltip, you implement <i>IChartLegend</i>
-    then you handle the injected data by LiveCharts
-</p>
+```{!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomersLegend.xaml}
+```
 
-<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomersLegend.xaml"></pre>
+```{!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomersLegend.xaml.cs}
+```
 
-<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomersLegend.xaml.cs"></pre>
+Finally let's set this customs controls to our chart.
 
-<p>
-    Finally let's set this customs controls to our chart.
-</p>
+<pulled-sample></pulled-sample>
 
-<div class="doc-alert">
-    To keep this example always up to date it is directly pulled from the Github repository, the
-    repo for simplicity uses the <i>UserControl</i> class to wrap every example, but you can use any
-    container for your plots.
-</div>
+```{!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomTooltipAndLegendExample.xaml}
+```
 
-<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomTooltipAndLegendExample.xaml"></pre>
+And the code behind
 
-<p>
-    And the code behind
-</p>
-
-<pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomTooltipAndLegendExample.xaml.cs"></pre>
+```{!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomTooltipAndLegendExample.xaml.cs}```
