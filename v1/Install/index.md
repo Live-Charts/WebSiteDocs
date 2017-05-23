@@ -1,17 +1,17 @@
 # Install
 
-UWP does not support all the features WPF does yet.{uwp, .doc-alert}
+UWP does not support all the features WPF does yet.{uwp .doc-alert}
 
 This article was built using visual studio2015, off-line installation help? 
 [try this guide](http://stackoverflow.com/questions/8120289/is-there-a-way-to-download-packages-from-nuget-org-then-do-an-offline-installati).{.doc-alert}
 
 Install using the [package manager console](https://docs.nuget.org/ndocs/tools/package-manager-console#installing-a-package):
 
-#### PM> Install-Package LiveCharts.Wpf{ wpf }
+#### PM> Install-Package LiveCharts.Wpf{wpf}
 
-#### PM> Install-Package LiveCharts.Uwp{ uwp }
+#### PM> Install-Package LiveCharts.Uwp{uwp}
 
-#### PM> Install-Package LiveCharts.WinForms{ wf }
+#### PM> Install-Package LiveCharts.WinForms{wf}
 
 Or go to the Solution Explorer, right click on references, then Manage NuGet Packages...
 

@@ -68,7 +68,7 @@ color according to the series positions in the *Chart.SeriesCollection* property
 repeat if necessary.{wf}
 
 ```{wpf||uwp}
-prettyprint">&lt;lvc:LineSeries Stroke="Red" Fill="Blue /"&gt;
+&lt;lvc:LineSeries Stroke="Red" Fill="Blue /"&gt;
 ```
 
 ```{wf}
