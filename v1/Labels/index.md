@@ -4,7 +4,7 @@ A Label is any string representation of any value in the chart, they are normall
 
 ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/labels.jpg)
 
-<pulled-sample platform="{{sms.platform}}"></pulled-sample>
+<pulled />
 
 **Code Behind**
 
