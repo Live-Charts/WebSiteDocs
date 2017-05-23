@@ -8,7 +8,7 @@ A Label is any string representation of any value in the chart, they are normall
 
 **Code Behind**
 
-```{wpf !&amp;amp;quot;https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Labels/LabelsExample.xaml.cs}
+```{wpf !&amp;amp;amp;quot;https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Labels/LabelsExample.xaml.cs}
 ```
 
 ```{uwp https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/Labels/LabelsExample.xaml.cs}
