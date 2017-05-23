@@ -80,6 +80,8 @@ In the next sample, we will configure our chart to plot *CustomerVm* class, and 
 
 <pulled-sample platform="{{platform}}"></pulled-sample>
 
+### Tooltip from scratch
+
 Right click in your solution explorer, Add -> New Item -> Browse for Class, name the file CustomerVm.cs and replace the generated file content with:
 
 ```{!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomerVM.cs}
@@ -104,6 +106,8 @@ The important part there is that CustomersTooltip implements*IChartTooltip* this
 
 Notice we used the *DataContext* property of the *UserControl*, and binded the *Data.Points* property to our *ItemsControl* to display the current points as we need.
 
+### Legend from scratch
+
 Lets also create a simple custom Legend, with a custom style, add another user control and name it *CustomersLegend*, the logic is the same as the custom tooltip, you implement *IChartLegend* then you handle the injected data by LiveCharts
 
 ```{!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomersLegend.xaml}
@@ -125,5 +129,6 @@ Finally let's set this customs controls to our chart.
 And the code behind
 
 ```{!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomTooltipAndLegendExample.xaml.cs}
+
 ```
 

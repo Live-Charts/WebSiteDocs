@@ -1,74 +1,71 @@
-﻿# Available Charts
+# Available Charts
 
-<ol style="list-style: none; padding: 0">
-    <li>
-        <h3>1. CartesianChart</h3>
+### Cartesian Chart
 
-        <p>
-            The <i>Cartesian Chart</i> class allows you to plot any series that uses a
-            <i>Cartesian coordinate system</i>, every point is a pair of values (<i>X</i>, <i>Y</i>),
-            it supports many series, you can combine any of these seriesin the same plot:
-        </p>
+ The *Cartesian Chart* class allows you to plot any series that uses a *cartesian coordinate system*, every point is a pair of values (*X*, *Y*), it supports many series, you can combine any of these seriesin the same plot:
 
-        <div class="row spaced">
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-                <div>Line Series</div>
-                <img ng-src="{{source}}/v1/Available Charts/lineSeries.jpg" />
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-                <div>Vertical Line Series</div>
-                <img ng-src="{{source}}/v1/Available Charts/verticallineseries.jpg" />
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-                <div>Column Series</div>
-                <img ng-src="{{source}}/v1/Available Charts/columnseries.jpg" />
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-                <div>Row Series</div>
-                <img ng-src="{{source}}/v1/Available Charts/rowseries.jpg" />
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-                <div>Stacked Area Series</div>
-                <img ng-src="{{source}}/v1/Available Charts/stackedareaseries.jpg" />
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-                <div>Vertical Stacked Area Series</div>
-                <img ng-src="{{source}}/v1/Available Charts/verticalstackedareaseries.jpg" />
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-                <div>Stacked Column Series</div>
-                <img ng-src="{{source}}/v1/Available Charts/stackedcolumnseries.jpg" />
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-                <div>Stacked Row Series</div>
-                <img ng-src="{{source}}/v1/Available Charts/stackedrowsseries.jpg" />
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-                <div>Heat Series</div>
-                <img ng-src="{{source}}/v1/Available Charts/Heat Series.jpg" />
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-                <div>OHCLand Candle Series</div>
-                <img ng-src="{{source}}/v1/Available Charts/ohclseries.jpg" />
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-                <div>Bubbles Series</div>
-                <img ng-src="{{source}}/v1/Available Charts/buubleseries.jpg" />
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-                <div>StepLine Series</div>
-                <img ng-src="{{source}}/v1/Available Charts/stepline.png" />
-            </div>
-        </div>
+<div class="row spaced">
 
-        <p>
-            Here is an example, notice some series use a specialized
-            point, LiveCharts already knows how to plot many types, if you need to define your own,
-            please take a read at 
-            <a href="/App/Examples/v1/{{sms.platform}}/Types and Mappers">Types and Mappers</a> article.
-        </p>
+​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
 
-        <pre class="prettyprint">using LiveCharts;
+​        <div>Line Series</div>
+
+​	![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/lineSeries.jpg)
+
+​    </div>
+
+​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+​        <div>Vertical Line Series</div>
+
+​	![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/verticallineseries.jpg)
+
+​    </div>
+​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+​        <div>Column Series</div>
+​        ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/columnseries.jpg)
+​    </div>
+​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+​        <div>Row Series</div>
+​        ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/rowseries.jpg)
+​    </div>
+​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+​        <div>Stacked Area Series</div>
+​        ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/stackedareaseries.jpg)
+​    </div>
+​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+​        <div>Vertical Stacked Area Series</div>
+​        ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/verticalstackedareaseries.jpg)
+​    </div>
+​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+​        <div>Stacked Column Series</div>
+​        ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/stackedcolumnseries.jpg)
+​    </div>
+​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+​        <div>Stacked Row Series</div>
+​        ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/stackedrowsseries.jpg)
+​    </div>
+​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+​        <div>Heat Series</div>
+​        ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/Heat%20Series.jpg)
+​    </div>
+​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+​        <div>OHCLand Candle Series</div>
+​        ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/ohclseries.jpg)
+​    </div>
+​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+​        <div>Bubbles Series</div>
+​        ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/buubleseries.jpg)
+​    </div>
+​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+​        <div>StepLine Series</div>
+​        ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/stepline.png)
+​    </div>
+</div>
+
+Here is an example, notice some series use a specialized point, LiveCharts already knows how to plot many types, if you need to define your own, please take a read at  <a href="/App/Examples/v1/{{sms.platform}}/Types and Mappers">Types and Mappers</a> article.
+
+```
+using LiveCharts;
 using LiveCharts.Defaults; //Contains the already defined types
 
 LiveCharts.SeriesCollection series = new LiveCharts.SeriesCollecion 
@@ -102,26 +99,20 @@ LiveCharts.SeriesCollection series = new LiveCharts.SeriesCollecion
       // ..
     }
   }
-}</pre>
-    </li>
-    <li>
-        <h3>2. Pie Chart</h3>
+}
+```
+### Pie Chart
+    
+Use it to plot pies and doughnuts
 
-        <p>Use it to plot pies and doughnuts</p>
-    </li>
-    <li>
-        <h3>3. Gauge</h3>
+### Gauge
+    
+It has 2 modes, 180 and 360 degrees, useful to display progress or completion.
 
-        <p>It has 2 modes, 180 and 360 degrees, useful to display progress or completion.</p>
-    </li>
-    <li>
-        <h3>4. Angular Gauge</h3>
+### Angular Gauge
+    
+Use it to display the current value in a range, for example a velocimeter.
 
-        <p>Use it to display the current value in a range, for example a velocimeter.</p>
-    </li>
-    <li>
-        <h3>5. Maps</h3>
-
-        <p>LiveCharts also support geo heat maps, they compare the values according to geographic zone.</p>
-    </li>
-</ol>
+### 5. Maps
+    
+LiveCharts also support geo heat maps, they compare the values according to geographic zone.

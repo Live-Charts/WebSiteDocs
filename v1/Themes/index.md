@@ -1,58 +1,33 @@
-﻿# Themes
+# Themes
 
-<div ng-if="uwp || wf">
-    <div class="doc-alert">
-        This feature is not supported in this platform
-    </div>
-</div>
+This feature is not supported in this platform.{.doc-alert,uwp||wf}
 
-<div ng-if="wpf">
-    <p>
-        You can set a default style for any chart in your application, you must select 
-        colors, size and weight, according to your needs.
-    </p>
+You can set a default style for any chart in your application, you must select colors, size and weight, according to your needs.{!uwp||wf}
 
-    <h3>Colors</h3>
+### Colors{!uwp||wf}
 
-    <p>
-        This set of colors will be the default used in your series, when the number of series is greater than the number of colors
-        in the theme, then the colors will repeat.
-    </p>
+This set of colors will be the default used in your series, when the number of series is greater than the number of colors in the theme, then the colors will repeat.{!uwp||wf}
 
-    <p>
-        <ol>
-            <li><b>Material</b>, based on <a href="https://material.google.com/style/color.html">material design</a> from Google</li>
-            <li><b>Metro</b>, based on MoedernUi design </li>
-            <li><b>Blue</b>, a scale of blues</li>
-            <li><b>White</b>, a scale of light colors</li>
-            <li><b>Black</b>, a scale of dark colors</li>
-        </ol>
-    </p>
++ **Material**, based on <a href="https://material.google.com/style/color.html">material design</a> from Google.
++ **Metro**, based on MoedernUi design
++ **Blue**, a scale of blues
++ **White**, a scale of light colors
++ **Black**, a scale of dark colors{!uwp||wf}
 
-    <h3>Size</h3>
+### Size{!uwp||wf}
 
-    <p>
-        The size determines the <i class="text-muted">FontSize</i> of <i class="text-muted">Axes</i> and <i class="text-muted">Series.DataLabels</i>,
-        it also sets the default size of <i class="text-muted">Series.PointGeometrySize</i>, options are small (s), medium (m) and large (l).
-    </p>
+The size determines the *FontSize* of *Axes* and *Series.DataLabels*, it also sets the default size of *Series.PointGeometrySize*, options are small (s), medium (m) and large (l).
 
-    <h3>Weight</h3>
+### Weight{!uwp||wf}
 
-    <p>
-        The weight defines the <i class="text-muted">Axis.Separator</i> stroke thickness and stroke dash array, it also defines the default
-        <i class="text-muted">Series.StrokeThickness</i> property, options are light, normal and bold.
-    </p>
+The weight defines the *Axis.Separator* stroke thickness and stroke dash array, it also defines the default *Series.StrokeThickness* property, options are light, normal and bold.{!uwp||wf}
 
-    <h3>Example</h3>
+### Sample{!uwp||wf}
 
-    <p>
-        In your solution explorer open App.xaml and add a <i class="text-muted">ResourceDictionary</i> to your application resources,
-        in this dictionary select the a color set, size and weight as shown in the code bellow, in this case we are using material design colors,
-        medium size and normal weight
-    </p>
+In your solution explorer open App.xaml and add a *ResourceDictionary* to your application resources, in this dictionary select the a color set, size and weight as shown in the code bellow, in this case we are using material design colors, medium size and normal weight.{!uwp||wf}
 
-
-    <pre class="prettyprint">&lt;Application x:Class="Wpf.App"
+```{!uwp||wf}
+&lt;Application x:Class="Wpf.App"
   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
   StartupUri="MainWindow.xaml">
@@ -82,19 +57,20 @@
                 &lt;!--Also add the base theme, this is required always-->
                 &lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/base.xaml" />
 
-                
+
             &lt;/ResourceDictionary.MergedDictionaries>
         &lt;/ResourceDictionary>
     &lt;/Application.Resources>
-&lt;/Application></pre>
+&lt;/Application>
+```
 
-    <h3>Custom Style</h3>
+### Custom Style{!uwp||wf}
 
-    <p>
-        You can also write your own theme, here is an example of a basic skeleton:
-    </p>
 
-    <pre class="prettyprint">&lt;Application x:Class="Wpf.App"
+You can also write your own theme, here is an example of a basic skeleton:{!uwp||wf}
+
+```{!uwp||wf}
+&lt;Application x:Class="Wpf.App"
   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
   xmlns:lvc="clr-namespace:LiveCharts.Wpf"
@@ -114,24 +90,24 @@
                     &lt;Color A="255" R="63" G="81" B="180" />
                     &lt;Color A="255" R="204" G="219" B="57" />
                 &lt;/lvc:ColorsCollection>
-
+    
                 &lt;system:Double x:Key="Size">12&lt;/system:Double>
-
+    
                 &lt;system:Double x:Key="SeparatorStrokeThickness">1.8&lt;/system:Double>
                 &lt;DoubleCollection x:Key="SeparatorStrokeDashArray">3&lt;/DoubleCollection>
                 &lt;system:Double x:Key="SeriesStrokeThickness">3.0&lt;/system:Double>
-
+    
                 &lt;Style TargetType="lvc:CartesianChart">
                     &lt;Setter Property="AnimationsSpeed" Value="0:0:0.420">&lt;/Setter>
                     &lt;Setter Property="SeriesColors" Value="{StaticResource ColorsCollection}"/>
                 &lt;/Style>
-
+    
                 &lt;Style TargetType="lvc:Axis">
                     &lt;Setter Property="FontSize" Value="{StaticResource Size}">&lt;/Setter>
                     &lt;Setter Property="FontFamily" Value="Calibri">&lt;/Setter>
                     &lt;Setter Property="Foreground" Value="#99303030">&lt;/Setter>
                 &lt;/Style>
-
+    
                 &lt;Style TargetType="lvc:Separator">
                     &lt;Setter Property="StrokeThickness" Value="{StaticResource SeparatorStrokeThickness}">&lt;/Setter>
                     &lt;Setter Property="StrokeDashArray" Value="{StaticResource SeparatorStrokeDashArray}">&lt;/Setter>
@@ -142,13 +118,13 @@
                         &lt;/Trigger>
                     &lt;/Style.Triggers>
                 &lt;/Style>
-
+    
                 &lt;Style TargetType="lvc:Series" x:Key="SeriesStyle">
                     &lt;Setter Property="FontFamily" Value="Calibri">&lt;/Setter>
                     &lt;Setter Property="FontSize" Value="{StaticResource Size}">&lt;/Setter>
                     &lt;Setter Property="StrokeThickness" Value="{StaticResource SeriesStrokeThickness}">&lt;/Setter>
                 &lt;/Style>
-
+    
                 &lt;Style TargetType="lvc:CandleSeries" BasedOn="{StaticResource SeriesStyle}"/>
                 &lt;Style TargetType="lvc:ColumnSeries" BasedOn="{StaticResource SeriesStyle}"/>
                 &lt;Style TargetType="lvc:HeatSeries" BasedOn="{StaticResource SeriesStyle}"/>
@@ -173,6 +149,4 @@
         &lt;/ResourceDictionary>
     &lt;/Application.Resources>
 &lt;/Application>
-
-</pre>
-</div>
+```

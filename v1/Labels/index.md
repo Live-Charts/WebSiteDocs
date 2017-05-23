@@ -8,25 +8,25 @@ A Label is any string representation of any value in the chart, they are normall
 
 **Code Behind**
 
-```{!&amp;amp;amp;amp;amp;quot;https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Labels/LabelsExample.xaml.cs}
+```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Labels/LabelsExample.xaml.cs}
 
 ```
 
-```{uwp https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/Labels/LabelsExample.xaml.cs}
+```{uwp,https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/Labels/LabelsExample.xaml.cs}
 
 ```
 
-```{wf https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/Cartesian/Labels/Labels.cs}
+```{wf,https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/Cartesian/Labels/Labels.cs}
 
 ```
 
 **XAML{wpf||uwp}**
 
-```{wpf https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Labels/LabelsExample.xaml}
+```{wpf,https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Labels/LabelsExample.xaml}
 
 ```
 
-```{uwp https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/Labels/LabelsExample.xaml}
+```{uwp,https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/Labels/LabelsExample.xaml}
 
 ```
 
@@ -34,9 +34,9 @@ A Label is any string representation of any value in the chart, they are normall
 
 An *Axis* has 2 types of labels, formatted and mapped labels.
 
-### Formatted Labels <small>As seen at the Y axis</small>
+### Formatted Labels
 
-A Formatted label is useful when there is a direct conversion between the chart value and the label, 
+A formatted label is shown at the top of this article at the Y axis, a Formatted label is useful when there is a direct conversion between the chart value and the label, 
 for example, in the image above, the Y axis has a range of values between 8 and 26, but because of  the current formatter, we are able to see '8' as '8.00k items'.
 
 To achieve this use the *Axis.LabelFormatter* property, it stores a function that takes a double 
@@ -48,9 +48,9 @@ MyAxis.LabelFormatter = val => val + "°"; //as degrees
 MyAxis.LabelFormatter = val => val + ".00 items sold"; //or any other custom format
 ```
 
-### Mapped Labels <small>As seen at the X axis</small>
+### Mapped Labels
 
-A mapped label is normally useful to map a position with a name, for example when first 
+A mapped label is shown at the top of this article at the X axis, they are normally useful to map a position with a name, for example when the first 
 point belongs to John, the second to Susan and the third one to Charles.
 
 ```{wpf}

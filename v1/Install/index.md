@@ -1,6 +1,6 @@
 # Install
 
-UWP does not support all the features WPF does yet.{uwp .doc-alert}
+UWP does not support all the features WPF does yet.{uwp,.doc-alert}
 
 This article was built using visual studio2015, off-line installation help? 
 [try this guide](http://stackoverflow.com/questions/8120289/is-there-a-way-to-download-packages-from-nuget-org-then-do-an-offline-installati).{.doc-alert}

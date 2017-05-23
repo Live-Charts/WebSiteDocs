@@ -42,7 +42,7 @@ myChart.Series = new SeriesCollection
 
 *XAML{wpf||uwp}*
 
-```{?wpf||uwp}
+```{wpf||uwp}
 &lt;lvc:CartesianChart Series="{Binding SeriesCollection}" />
 ```
 
