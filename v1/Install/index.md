@@ -1,38 +1,40 @@
-﻿# Install
+# Install
 
-UWP does not support all the features WPF does yet.{?uwp, .doc-alert}
+UWP does not support all the features WPF does yet.{uwp, .doc-alert}
 
 This article was built using visual studio2015, off-line installation help? 
 [try this guide](http://stackoverflow.com/questions/8120289/is-there-a-way-to-download-packages-from-nuget-org-then-do-an-offline-installati).{.doc-alert}
 
-Install using the <a href="https://docs.nuget.org/ndocs/tools/package-manager-console#installing-a-package">package manager console</a>:{}
+Install using the [package manager console](https://docs.nuget.org/ndocs/tools/package-manager-console#installing-a-package):
 
-### PM> Install-Package LiveCharts.Wpf{ ?wpf }
-### PM> Install-Package LiveCharts.Uwp{ ?uwp }
-### PM> Install-Package LiveCharts.WinForms{ ?wf }
+#### PM> Install-Package LiveCharts.Wpf{ wpf }
+
+#### PM> Install-Package LiveCharts.Uwp{ uwp }
+
+#### PM> Install-Package LiveCharts.WinForms{ wf }
 
 Or go to the Solution Explorer, right click on references, then Manage NuGet Packages...
 
-![]({{source}}/v1/Install/managenuget.png)
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/managenuget.png)
 
-Browse for **LiveCharts.Wpf{ ?wpf }** **LiveCharts.Uwp{ ?uwp }** **LiveCharts.WinForms{ ?wf }** 
+Browse for **LiveCharts.Wpf{ wpf }** **LiveCharts.Uwp{ uwp }** **LiveCharts.WinForms{ wf }** 
 select the package and click on install.
 
-![]({{source}}/v1/Install/browseNuget.png)
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/browseNuget.png)
 
-Add namespace to your XAML{ ?wpf||uwp }
+Add namespace to your XAML{ wpf||uwp }
 
-```{?wpf}
+```{wpf}
 xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
 ```
 
-```{?uwp}
+```{uwp}
 xmlns:lvc="using:LiveCharts.Uwp"
 ```
 
 Add namespaces to code behind
 
-```{?wpf}
+```{wpf}
 using LiveCharts;
 using LiveCharts.Wpf;
 ```
@@ -43,49 +45,33 @@ using LiveCharts.Uwp;
 ```
 
 Notice the WinForms version is based on WPF rendering engine, so you are running 
-the WPF package with a wrapper for Windows Forms, therefore you need 3 namespaces{?wf}
+the WPF package with a wrapper for Windows Forms, therefore you need 3 namespaces{wf}
 
-```{?wf}
+```{wf}
 using LiveCharts; //Core of the library
 using LiveCharts.Wpf; //The WPF controls
 using LiveCharts.WinForms //the WinForm wrappers
 ```
 
-<div ng-if="wf">
-    <p>
-        Now you can add the charts to your toolbox as any WinForms control, After the package was installed correctly,
-        go to <i>Build</i> menu, then <i>Rebuild Solution</i>, this will create the LiveCharts.WinForms.dll file in
-        your project directory.
-    </p>
-    <p>
-        In the designer, open your toolbox, right click on it, then <i>Choose Items</i>
-    </p>
-    <div class="text-center">
-        <img src="{{source}}/v1/Install/toolboxchooseitems.png"/>
-    </div>
-    <p>
-        At <i>.Net Framework Components</i> click on browse
-    </p>
-    <div class="text-center">
-        <img src="{{source}}/v1/Install/browsecomponents.png"/>
-    </div>
-    <p>
-        Browse for <i>LiveCharts.WinForms.dll</i> file, select it and then click <i>Open</i>,
-        the file is normally located at <i>ProjectLocation/bin/Debug</i>
-    </p>
-    <div class="text-center">
-        <img src="{{source}}/v1/Install/winformsdll.png"/>
-    </div>
-    <p>
-        In the <i>Choose Toolbox Items</i> dialog click OK to add the LiveCharts controls to your project.
-    </p>
-    <p>
-        That's all, now you should see at least 3 new controls in your toolbox, <i>CartesianChart</i>,
-        <i>PieChart</i> and <i>Gauge</i>, drag them to any form as any other control.
-    </p>
-    <div class="text-center">
-        <img src="{{source}}/v1/Install/toolboxinstalled.png" />
-    </div>
-</div>
+Now you can add the charts to your toolbox as any WinForms control, After the package was installed correctly, go to *Build* menu, then *Rebuild Solution*, this will create the LiveCharts.WinForms.dll file in your project directory.{wf}
 
+In the designer, open your toolbox, right click on it, then *Choose Items*{wf}
 
+![{wf}](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/toolboxchooseitems.png)
+
+At *.Net Framework Components* click on browse{wf}
+
+![{wf}](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/browsecomponents.png)
+
+​    
+
+Browse for *LiveCharts.WinForms.dll* file, select it and then click *Open*, the file is normally located at *ProjectLocation/bin/Debug*{wf}
+
+![{wf}](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/winformsdll.png)
+
+In the *Choose Toolbox Items* dialog click OK to add the LiveCharts controls to your project.{wf}
+
+That's all, now you should see at least 3 new controls in your toolbox, *CartesianChart*,
+*PieChart* and *Gauge*, drag them to any form as any other control.
+
+![{wf}](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/toolboxinstalled.png)

@@ -1,4 +1,4 @@
-﻿# Series
+# Series
 
 ### Strokes and Fills
 
@@ -37,7 +37,6 @@ property, you can control which series is over or under in the z plane, here is 
 &lt;lvc:LineSeries Panel.ZIndex="0" /&gt;
 &lt;lvc:LineSeries Panel.ZIndex="1" /&gt;
 &lt;lvc:LineSeries Panel.ZIndex="2" /&gt;
-
 ```
 ```{uwp}
 &lt;lvc:LineSeries Canvas.ZIndex="0" /&gt;
@@ -59,7 +58,7 @@ series visibility at run time.
 Notice any stacked series (including pie series) will not only change based on the *Visibility* property,
 it will also remove the series from the stacked values, and the chart will be updated as if that series 
 had not existed.
- 
+
 ### Specialized properties
 
 There are some properties that do only exist at certain series, to find more info about how to customize
@@ -69,9 +68,9 @@ every series, please browse the object explorer in this web site, for example br
 
 ### A short sample
 
-![]({{source}}/v1/Series/custom-line.jpg)
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/custom-line.jpg)
 
-### Code Behind{wpf||uwp}
+**Code Behind{wpf||uwp}**
 
 ```{wpf||uwp}
 using LiveCharts;
@@ -162,7 +161,7 @@ namespace Winforms.Cartesian.Customized_Series
 }
 ```
 
-### XAML{wpf||uwp}
+**XAML{wpf||uwp}**
 
 ```{wpf||uwp}
 &lt;lvc:CartesianChart Background="#222E31"&gt;

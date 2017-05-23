@@ -2,6 +2,8 @@
 
 You can practically custom everything in LiveCharts and axes are not the exception, the next image illustrates an axis:
 
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/axis%20explain.jpg)
+
 ### Title
 
 Use the _Title_ property to add a label an axis.

@@ -1,4 +1,4 @@
-﻿# Components
+# Components
 
 LiveCharts is designed to be easy for the user, everything is updated and animated
 automatically, the library will only update when it considers it is necessary, not every time 
@@ -8,12 +8,12 @@ you really don’t need to worry about anything but your business, let LiveChart
 ### Starting Sample
 
 There are many types ready to plot already defined, you can learn more in the
-[Types and Configuration section](/App/examples/v1/{{sms.platform}}/Types%20and%20Configuration)</a>, in 
+[Types and Configuration section](/App/examples/v1/{{sms.platform}}/Types%20and%20Configuration), in 
 this brief example we are plotting double values.
 
-### Code Behind
+*Code Behind*
 
-```{?wpf||uwp}
+```{wpf||uwp}
 SeriesCollection = new SeriesCollection
 {
     new LineSeries
@@ -26,7 +26,7 @@ SeriesCollection = new SeriesCollection
     }
 };
 ```
-```{?wf}
+```{wf}
 myChart.Series = new SeriesCollection
 {
     new LineSeries
@@ -40,7 +40,7 @@ myChart.Series = new SeriesCollection
 };
 ```
 
-### XAML{?wpf||uwp}
+*XAML{wpf||uwp}*
 
 ```{?wpf||uwp}
 &lt;lvc:CartesianChart Series="{Binding SeriesCollection}" />
@@ -53,26 +53,26 @@ instance or add/remove a value at every series, the chart will update and animat
 
 The next image will guide you to get more familiar with LiveCharts components.
 
-![]({{source}}/v1/Components/components.png)
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/components.png)
 
-All the series have <i>Stroke</i> and <i>Fill</i> properties.
+All the series have *Stroke* and *Fill* properties.
 
-![]({{source}}/v1/Components/strokeandfill.png)
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/strokeandfill.png)
 
 You can set a Fill and Stroke only for a specific series, if you don't then the library will decide a 
 color according to your [theme](/App/examples/v1/{{sms.platform}}/Themes") and the series positions in 
-the <i>Chart.SeriesCollection</i> property, colors will repeat if necessary.{?wpf||uwp}
+the *Chart.SeriesCollection* property, colors will repeat if necessary.{wpf||uwp}
 
 You can set a Fill and Stroke only for a specific series, if you don't then the library will decide a 
-color according to the series positions in the <i>Chart.SeriesCollection</i> property, colors will
-repeat if necessary.{?wf}
+color according to the series positions in the *Chart.SeriesCollection* property, colors will
+repeat if necessary.{wf}
 
-```{?wpf||uwp}
+```{wpf||uwp}
 prettyprint">&lt;lvc:LineSeries Stroke="Red" Fill="Blue /"&gt;
 ```
 
-```{?wf}
-//set Strok/Fill for a specific series
+```{wf}
+//use the Stroke/Fill for a specific series
 mySeries.Stroke = System.Windows.Media.Brushes.Red;
 mySeries.Fill = System.Windows.Media.Brushes.Blue;
 
@@ -85,21 +85,21 @@ LiveCharts.Wpf.Charts.Chart.Base.Colors = new List&lt;System.Windows.Media.Color
 };
 ```
 
-### Series properties
+### Properties
 
 Setting the *Series.Visibility* (will define the drawn shape visibility), 
 *Panel.ZIndex* (drawn shape z-index property), *Series.StrokeDashArray* (dashed strokes) properties
 will be binded to the drawn shape, for example:
 
-```{?wpf}
+```{wpf}
 &lt;lvc:LineSeries Visibility="Hidden" StrokeDashArray="2" Panel.Zindex="3" / &gt;
 ```
 
-```{?uwp}
+```{uwp}
 &lt;lvc:LineSeries Visibility="Hidden" StrokeDashArray="2" Canvas.Zindex="3" / &gt;
 ```
 
-```{?wf}
+```{wf}
 mySeries.Visibility = System.Windows.Visibility.Hidden;
 mySeries.StrokeDashArray = new System.Windows.Media.DoubleCollection {2};
 System.Windows.Controls.Panel.SetZIndex(mySeries, 3);
