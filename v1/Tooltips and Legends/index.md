@@ -83,6 +83,7 @@ In the next sample, we will configure our chart to plot *CustomerVm* class, and 
 Right click in your solution explorer, Add -> New Item -> Browse for Class, name the file CustomerVm.cs and replace the generated file content with:
 
 ```{!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomerVM.cs}
+
 ```
 
 Now we are going to build our own DataTooltip, this tooltip will display all the *CustomerVm* properties, Right click in your solution explorer Add -> New Item -> Browse for *User Control (WPF)*, name the UserControl CustomersTooltip.
@@ -90,11 +91,13 @@ Now we are going to build our own DataTooltip, this tooltip will display all the
 Replace CustomersTooltip.xaml with:
 
 ```{!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomersTooltip.xaml}
+
 ```
 
 And the code behind of the user control (CustomersTooltip.xaml.cs)
 
 ```{!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomersTooltip.xaml.cs}
+
 ```
 
 The important part there is that CustomersTooltip implements*IChartTooltip* this interface requires our *UserControl* to Implement *INotifyPropertyChanged* and a new property *Data* of type <a ng-href="/App/documentation/beta/{{sms-platform}}/LiveCharts-Wpf-TooltipData">TooltipData</a>, LiveCharts will inject all it knows about the current points to show in the tooltip, your job is to display this data as you require.
@@ -104,9 +107,11 @@ Notice we used the *DataContext* property of the *UserControl*, and binded the *
 Lets also create a simple custom Legend, with a custom style, add another user control and name it *CustomersLegend*, the logic is the same as the custom tooltip, you implement *IChartLegend* then you handle the injected data by LiveCharts
 
 ```{!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomersLegend.xaml}
+
 ```
 
 ```{!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomersLegend.xaml.cs}
+
 ```
 
 Finally let's set this customs controls to our chart.
@@ -114,8 +119,11 @@ Finally let's set this customs controls to our chart.
 <pulled-sample></pulled-sample>
 
 ```{!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomTooltipAndLegendExample.xaml}
+
 ```
 
 And the code behind
 
-```{!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomTooltipAndLegendExample.xaml.cs}```
+```{!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomTooltipAndLegendExample.xaml.cs}
+```
+
