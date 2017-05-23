@@ -1,122 +1,112 @@
-﻿<h3 class="important-tittle">Labels</h3>
+# Labels
 
-<p>
-    A Label is any string representation of any value in the chart, they are normally placed over the axis length and in tool tips.
-</p>
+A Label is any string representation of any value in the chart, they are normally placed over the axis length and in tool tips.
 
-<div class="text-center">
-    <img ng-src="{{source}}/v1/Labels/labels.jpg"/>
-</div>
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/labels.jpg)
 
-<div class="doc-alert">
-    To keep this example always up to date it is directly pulled from the Github repository, the
-    repo for simplicity uses the <i>Page</i> class to wrap every example, but you can use any
-    container for your plots.
-</div>
+<pulled-sample platform="{{sms.platform}}"></pulled-sample>
 
-<h4>Code Behind</h4>
+**Code Behind**
 
-<pre class="prettyprint" ng-if="wpf" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Labels/LabelsExample.xaml.cs"></pre>
-<pre class="prettyprint" ng-if="uwp" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/Labels/LabelsExample.xaml.cs"></pre>
-<pre class="prettyprint" ng-if="wf" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/Cartesian/Labels/Labels.cs"></pre>
+```{wpf !&amp;quot;https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Labels/LabelsExample.xaml.cs}
 
-<h4 ng-if="uwp ||wpf">XAML</h4>
+```
 
-<pre class="prettyprint" ng-if="wpf" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Labels/LabelsExample.xaml"></pre>
-<pre class="prettyprint" ng-if="uwp" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/Labels/LabelsExample.xaml"></pre>
+``````{uwp https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/Labels/LabelsExample.xaml.cs}
 
-<h4>1. Axis Labels</h4>
+``````
 
-<p>
-    An <i>Axis</i> has 2 types of labels, formatted and mapped labels.
-</p>
+```{wf https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/Cartesian/Labels/Labels.cs}
 
-<h4>1.1 Formatted Labels <small class="text-muted">As seen at Y axis</small></h4>
+```
 
-<p>
-    A Formatted label is useful when there is a direct conversion between the chart value and the label, 
-    for example, in the image above, the Y axis has a range of values between 8 and 26, but because of 
-    the current formatter, we are able to see '8' as '8.00k items'.
-</p>
+**XAML{wpf||uwp}**
 
-<p>
-    To achieve this use the <i>Axis.LabelFormatter</i> property, it stores a function that takes a double 
-    value as parameter and returns a string, LiveCharts will use this function every time it needs to display 
-    a chart value as <i>string</i>.
-</p>
+```{wpf https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Labels/LabelsExample.xaml}
 
-<pre class="prettyprint">MyAxis.LabelFormatter = val => val.ToString("C"); //as currency
+```
+
+```{uwp https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/Labels/LabelsExample.xaml}
+
+```
+
+### Axis Labels
+
+An *Axis* has 2 types of labels, formatted and mapped labels.
+
+### Formatted Labels <small>As seen at the Y axis</small>
+
+A Formatted label is useful when there is a direct conversion between the chart value and the label, 
+for example, in the image above, the Y axis has a range of values between 8 and 26, but because of  the current formatter, we are able to see '8' as '8.00k items'.
+
+To achieve this use the *Axis.LabelFormatter* property, it stores a function that takes a double 
+value as parameter and returns a string, LiveCharts will use this function every time it needs to display a chart value as *string*.
+
+```
+MyAxis.LabelFormatter = val => val.ToString("C"); //as currency
 MyAxis.LabelFormatter = val => val + "°"; //as degrees
-MyAxis.LabelFormatter = val => val + ".00 items sold"; //or any other custom format</pre>
+MyAxis.LabelFormatter = val => val + ".00 items sold"; //or any other custom format
+```
 
-<h4>1.2 Mapped Labels <small class="text-muted">As seen at X axis</small></h4>
+### Mapped Labels <small>As seen at the X axis</small>
 
-<p>
-    A mapped label is normally useful to map a position with a name, for example when first 
-    point belongs to John, the second to Susan and the third one to Charles.
-</p>
+A mapped label is normally useful to map a position with a name, for example when first 
+point belongs to John, the second to Susan and the third one to Charles.
 
-<pre class="prettyprint" ng-if="wpf">&lt;lvc:BarChart&gt;
+```{wpf}
+&lt;lvc:BarChart&gt;
   &lt;lvc:BarChart.AxisX&gt;
     &lt;lvc:Axis Title="Month" Labels="John, Susan, Charles" /&gt;
   &lt;/lvc:BarChart.AxisX&gt;
-&lt;/lvc:BarChart&gt;</pre>
+&lt;/lvc:BarChart&gt;
+```
 
-<pre class="prettyprint" ng-if="uwp">Labels = new string[] {"John", "Charles", "Susan"};</pre>
+```{uwp}
+//Code Behind
+Labels = new string[] {"John", "Charles", "Susan"};
 
-<pre class="prettyprint" ng-if="uwp">&lt;lvc:BarChart&gt;
+//XAML
+&lt;lvc:BarChart&gt;
   &lt;lvc:BarChart.AxisX&gt;
     &lt;lvc:Axis Title="Month" Labels="{Binding Labels}" /&gt;
   &lt;/lvc:BarChart.AxisX&gt;
-&lt;/lvc:BarChart&gt;</pre>
+&lt;/lvc:BarChart&gt;
+```
 
-<pre class="prettyprint" ng-if="wf">cartesianChart1.AxisX.Add(new LiveCharts.Wpf.Axis
+```{wf}
+cartesianChart1.AxisX.Add(new LiveCharts.Wpf.Axis
 {
    Labels = new string[] {"John", "Charles", "Susan"}
-});</pre>
+})
+```
 
-<p>
-    Labels are mapped according to the position (zero-indexed) of each label in our labels collection,
-    when a chart requires to draw a label for <i>X = 0</i>, it will pull <i>Labels[0]</i>, when <i>X = 1</i>
-    the label will be <i>Labels[1]</i> .... when <i>X = n</i> => <i>Labels[n]</i>.
-</p>
+Labels are mapped according to the position (zero-indexed) of each label in our labels collection,  when a chart requires to draw a label for *X = 0*, it will pull *Labels[0]*, when *X = 1* the label will be *Labels[1]* .... when *X = n* => *Labels[n]*.
 
-<p>
-    Notice that if the axis value is greater than <i>Labels.Count</i> an empty string will be returned.
-</p>
+Notice that if the axis value is greater than <i>Labels.Count</i> an empty string will be returned.
 
-<p>
-    <i>Axis.Labels</i> hides <i>Axis.LabelFormatter</i>, therefore if <i>Axis.Labels</i> is not null 
-    then labels will be pulled from <i>Axis.Labels</i>, if <i>Axis.Labels</i> is null then LiveCharts 
-    will use the formatter, if both are null then the raw value will be used as label.
-</p>
+*Axis.Labels* hides *Axis.LabelFormatter*, therefore if *Axis.Labels* is not null then labels will be pulled from *Axis.Labels*, if *Axis.Labels* is null then LiveCharts will use the formatter, if both are null then the raw value will be used as label.
 
-<h4>2. Data Labels</h4>
+### Data Labels
 
-<p>
-    Any time you need a label on every point of your series (<small class="text-muted">as shown in image</small>), 
-    set the <i>Series.DataLabels</i> property to <i>true</i>.
-</p>
+Any time you need a label on every point of your series (<small class="text-muted">as shown in image</small>), set the *Series.DataLabels* property to *true*.
 
-<p>
-    If necessary, you can also customize the DataLabel format using the <i>Series.LabelPoint</i> property
-</p>
+if necessary, you can also customize the DataLabel format using the *Series.LabelPoint* property
 
-<pre class="prettyprint">new ColumnSeries
+```
+new ColumnSeries
 {
    Values = new ChartValues&lt;double> { 4, 2, 8, 2, 3, 0, 1 },
    DataLabels = true,
    LabelPoint = point => point.Y + "K"
-}</pre>
+}
+```
 
-<h4>Rotating labels</h4>
+### Rotating labels
 
-<p>
-    Some times your labels are long, and you need to optimize the space, in this case you can rotate any axis labels.
-    You can use any angle, even negatives.
-</p>
+Some times your labels are long, and you need to optimize the space, in this case you can rotate any axis labels, You can use any angle, even negatives.
 
-<pre class="prettyprint" ng-if="wpf || uwp">&lt;lvc:CartesianChart Grid.Row="2" Series="{Binding SeriesCollection}"&gt;
+```{wpf||uwp}
+&lt;lvc:CartesianChart Grid.Row="2" Series="{Binding SeriesCollection}"&gt;
   &lt;lvc:CartesianChart.AxisX&gt;
     &lt;lvc:Axis LabelsRotation="13" Labels="{Binding Labels}"&gt;
       &lt;lvc:Axis.Separator&gt;
@@ -132,9 +122,11 @@ MyAxis.LabelFormatter = val => val + ".00 items sold"; //or any other custom for
       &lt;/lvc:Axis&gt;
     &lt;/lvc:CartesianChart.AxisX&gt;
   &lt;lvc:CartesianChart.AxisY&gt;
-&lt;/lvc:CartesianChart&gt;</pre>
+&lt;/lvc:CartesianChart&gt;
+```
 
-<pre class="prettyprint" ng-ig="wf">cartesianChart1.AxisX.Add(new LiveCharts.Wpf.Axis
+```{wf}
+cartesianChart1.AxisX.Add(new LiveCharts.Wpf.Axis
 {
    Labels = new[]
    {
@@ -148,4 +140,5 @@ MyAxis.LabelFormatter = val => val + ".00 items sold"; //or any other custom for
      Step = 1, // if you don't force the separator, it will be calculated automatically, and could skip some labels
      IsEnabled = false //disable it to make it invisible.
    }
-});</pre>
+});
+```

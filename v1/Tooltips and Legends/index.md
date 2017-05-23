@@ -1,48 +1,47 @@
-﻿<h3 class="important-tittle">Tooltips and Legends</h3>
+# Tooltips and Legends
 
-<p>
-    By default every chart that requires a Tooltip or Legend, initializes a new instance of
-    <a ng-href="/App/documentation/beta/{{sms.platfom}}/LiveCharts-Wpf-DefaultLegend">DefaultLegend</a>  or
-    <a ng-href="/App/documentation/beta/{{sms.platfom}}/LiveCharts-Wpf-DefaultTooltip">DefaultTooltip</a>.
-</p>
+By default every chart that requires a Tooltip or Legend, initializes a new instance of
+<a ng-href="/App/documentation/beta/{{sms.platfom}}/LiveCharts-Wpf-DefaultLegend">DefaultLegend</a>  or
+<a ng-href="/App/documentation/beta/{{sms.platfom}}/LiveCharts-Wpf-DefaultTooltip">DefaultTooltip</a>.
 
-<h4>Customizing defaults</h4>
+### Customizing defaults
 
-<p>
-    you can customize these classes, for example the background color, bullet size, or orientation, as shown in the next block:
-</p>
+You can customize the background color, bullet size, or orientation, of these objects, as shown in the next block:
 
-<pre class="prettyprint" ng-if="uwp || wpf">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}">
+```{uwp||wpf}
+&lt;lvc:CartesianChart Series="{Binding SeriesCollection}">
     &lt;lvc:CartesianChart.ChartLegend>
         &lt;lvc:DefaultLegend BulletSize="20" Background="Red"/>
     &lt;/lvc:CartesianChart.ChartLegend>
     &lt;lvc:CartesianChart.DataTooltip>
         &lt;lvc:DefaultTooltip BulletSize="20" Background="Gray"/>
     &lt;/lvc:CartesianChart.DataTooltip>
-&lt;/lvc:CartesianChart></pre>
+&lt;/lvc:CartesianChart>
+```
 
-<pre class="prettyprint" ng-if="wf">cartesianChart1.Datatooltip.Bulletize = 20;
-cartesianChart1.DataTooltip.Background = Brushes.Red;</pre>
+```{wf}
+cartesianChart1.Datatooltip.Bulletize = 20;
+cartesianChart1.DataTooltip.Background = Brushes.Red;
+```
 
-<p>
-    You can also set the selection mode of your tooltip, for example with the next code we force our tooltip
-    to display only the point that was hovered.
-</p>
+You can also set the selection mode of your tooltip, for example with the next code we force our tooltip to display only the point that was hovered.
 
-<pre class="prettyprint" ng-if="wpf || uwp">&lt;lvc:CartesianChart Series="{Binding SeriesCollection}">
+```{wpf||uwp}
+&lt;lvc:CartesianChart Series="{Binding SeriesCollection}">
     &lt;lvc:CartesianChart.DataTooltip>
         &lt;lvc:DefaultTooltip SelectionMode="OnlySender" />
     &lt;/lvc:CartesianChart.DataTooltip>
-&lt;/lvc:CartesianChart></pre>
+&lt;/lvc:CartesianChart>
+```
 
-<pre class="prettyprint" ng-if="wf">cartesianChart1.DataTooltip.SelectionMode = LiveCharts.TooltipSelectionMode.OnlySender;</pre>
+```{wf}
+cartesianChart1.DataTooltip.SelectionMode = LiveCharts.TooltipSelectionMode.OnlySender;
+```
 
-<div ng-if="wpf || uwp">
-    <p>
-        An alternative sample:
-    </p>
+An alternative sample:{uwp||wpf}
 
-    <pre class="prettyprint">&lt;lvc:CartesianChart>
+```{uwp||wpf}
+&lt;lvc:CartesianChart>
         &lt;lvc:CartesianChart.Resources>
             &lt;Style TargetType="lvc:DefaultTooltip">
                 &lt;Setter Property="Background" Value="DarkOrange">&lt;/Setter>
@@ -60,39 +59,24 @@ cartesianChart1.DataTooltip.Background = Brushes.Red;</pre>
         &lt;lvc:CartesianChart.Series>
             &lt;lvc:LineSeries Values="4,2,6,4">&lt;/lvc:LineSeries>
         &lt;/lvc:CartesianChart.Series>
-    &lt;/lvc:CartesianChart></pre>
+    &lt;/lvc:CartesianChart>
+```
 
-    <p>Would result in the following tooltip</p>
+Would result in the following tooltip{wpf||uwp}
 
-    <div class="text-center">
-        <img ng-src="{{source}}/v1/Tooltips and Legends/customtooltip.gif"/>
-    </div>
-</div>
+![{wpf||uwp}](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/customtooltip.gif)
 
-<h4>From Scratch</h4>
+### From Scratch
 
-<p>
-    The previous block works when you need to customize the appearance of your chart components, but how about
-    modifying the way the data is displayed in the tooltip, or showing extra properties in your tooltips?
-</p>
+The previous block works when you need to customize the appearance of your chart components, but how about modifying the way the data is displayed in the tooltip, or showing extra properties in your tooltips?
 
-<div class="doc-alert" ng-if="wf">
-    Sadly there is not a native way to do this in WinForms, since LiveCharts.Winforms is actually a wrapper
-    for LieCharts.Wpf you must create a Wpf UserControl to make this work, it is easy and you don't
-    really need advanced knowledge about WPF to make it work.
-</div>
+Sadly there is not a native way to do this in WinForms, since LiveCharts.Winforms is actually a wrapper for LieCharts.Wpf you must create a Wpf UserControl to make this work, it is easy and you don't really need advanced knowledge about WPF to make it work.{wf}
 
-<p>
-    The <i>DefaultTooltip</i> and <i>DefaultLegend</i> classes are designed to work for all cases, if you need a specialized
-    component you can define your own, the logic is the next, you create a custom UserControl,
-    LiveCharts will inject the data the user needs to see in the tooltip, and you need to handle how to
-    display this data according to your needs, you can do everything you know about WPF to make it work.
-</p>
+The *DefaultTooltip* and *DefaultLegend* classes are designed to work for all cases, if you need a specialized component you can define your own, the logic is the next, you create a custom *UserControl*, LiveCharts will inject the data the user needs to see in the tooltip, and you need to handle how to display this data according to your needs, you can do everything you know about WPF to make it work.
 
-<p>
-    In the next sample, we will configure our chart to plot <i>CustomerVm</i> class,
-    and we will build a custom tooltip to show more properties about our customers.
-</p>
+In the next sample, we will configure our chart to plot *CustomerVm* class, and we will build a custom tooltip to show more properties about our customers.
+
+![]()
 
 <div class="text-center">
     <img ng-src="{{source}}/v1/Tooltips and Legends/Customizing Tooltips.jpg"/>
