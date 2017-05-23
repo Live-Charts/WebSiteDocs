@@ -23,7 +23,7 @@ public class ObservableValue
 Then implement *INotifyPropertyChanged*.
 
 ```
-public class ObservableValue : INotifyPropertyChanged //added INotifyPropertyChanged
+public class ObservableValue : INotifyPropertyChanged // added INotifyPropertyChanged
 {
     private double _value;
 
@@ -33,7 +33,7 @@ public class ObservableValue : INotifyPropertyChanged //added INotifyPropertyCha
         set
         {
             _value = value;
-            OnPropertyChanged("Value");
+            OnPropertyChanged("Value"); // Called OnPropertyChanged()
         }
     }
     
@@ -43,6 +43,7 @@ public class ObservableValue : INotifyPropertyChanged //added INotifyPropertyCha
     
     protected virtual void OnPropertyChanged(string propertyName = null)
     {
+        //Raise PropertyChanged event
         if (PropertyChanged != null) 
             PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
