@@ -139,6 +139,8 @@ cartesianChart1.AxisY.Add(new Axis
 
 When you need to save some space, merge any axis in the chart, try using the _Axis.IsMerged_ property to true, the next image shows a merged axis (left) vs a normal axis (right)
 
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/mergedaxis.png)
+
 ### Axes positioning
 
 No matter if you have 1 or 10 axes, you could always specify where the axis is stacked, using the _Axis.Position_ property, options are _RightTop, LeftBottom_.
