@@ -7,11 +7,11 @@ This article was built using visual studio2015, off-line installation help?
 
 Install using the [package manager console](https://docs.nuget.org/ndocs/tools/package-manager-console#installing-a-package):
 
-#### PM> Install-Package LiveCharts.Wpf{wpf}
+PM> Install-Package LiveCharts.Wpf{wpf,.console}
 
-#### PM> Install-Package LiveCharts.Uwp{uwp}
+PM> Install-Package LiveCharts.Uwp{uwp,.console}
 
-#### PM> Install-Package LiveCharts.WinForms{wf}
+PM> Install-Package LiveCharts.WinForms{wf,.console}
 
 Or go to the Solution Explorer, right click on references, then Manage NuGet Packages...
 
