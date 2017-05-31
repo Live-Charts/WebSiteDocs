@@ -72,6 +72,6 @@ Browse for *LiveCharts.WinForms.dll* file, select it and then click *Open*, the 
 In the *Choose Toolbox Items* dialog click OK to add the LiveCharts controls to your project.{wf}
 
 That's all, now you should see at least 3 new controls in your toolbox, *CartesianChart*,
-*PieChart* and *Gauge*, drag them to any form as any other control.
+*PieChart* and *Gauge*, drag them to any form as any other control.{wf}
 
 ![{wf}](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/toolboxinstalled.png)

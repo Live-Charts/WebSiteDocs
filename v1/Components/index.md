@@ -49,7 +49,7 @@ myChart.Series = new SeriesCollection
 Simple isn't it? that is all you need, now every time you add/remove a series to the SeriesCollection 
 instance or add/remove a value at every series, the chart will update and animate automatically.
 
-### Components
+### Chart Components
 
 The next image will guide you to get more familiar with LiveCharts components.
 
