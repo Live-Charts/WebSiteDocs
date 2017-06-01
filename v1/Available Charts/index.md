@@ -102,17 +102,17 @@ LiveCharts.SeriesCollection series = new LiveCharts.SeriesCollecion
 }
 ```
 ### Pie Chart
-    
+
 Use it to plot pies and doughnuts
 
 ### Gauge
-    
+
 It has 2 modes, 180 and 360 degrees, useful to display progress or completion.
 
 ### Angular Gauge
-    
+
 Use it to display the current value in a range, for example a velocimeter.
 
-### 5. Maps
-    
+### Maps
+
 LiveCharts also support geo heat maps, they compare the values according to geographic zone.
