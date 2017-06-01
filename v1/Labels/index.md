@@ -4,29 +4,29 @@ A Label is any string representation of any value in the chart, they are normall
 
 ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/labels.jpg)
 
-<pulled />
+<pulled ></pulled>
 
-**Code Behind**
+### Code Behind
 
 ```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Labels/LabelsExample.xaml.cs}
 
 ```
 
-```{uwp,https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/Labels/LabelsExample.xaml.cs}
+```{uwp,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/Labels/LabelsExample.xaml.cs}
 
 ```
 
-```{wf,https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/Cartesian/Labels/Labels.cs}
+```{wf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/Cartesian/Labels/Labels.cs}
 
 ```
 
-**XAML{wpf||uwp}**
+### XAML{wpf||uwp}
 
-```{wpf,https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Labels/LabelsExample.xaml}
+```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Labels/LabelsExample.xaml}
 
 ```
 
-```{uwp,https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/Labels/LabelsExample.xaml}
+```{uwp,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/Labels/LabelsExample.xaml}
 
 ```
 
