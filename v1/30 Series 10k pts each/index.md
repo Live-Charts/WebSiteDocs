@@ -12,7 +12,7 @@
 
 ```
 
-source not found{uwp,.doc-alert}
+Source not found, this article might not be built yet for this platform{uwp,.doc-alert-404}
 
 ```{wf,!https://raw.githubusercontent.com/Live-Charts/GearedExamples/master/WinForms/MultipleSeries/MultipleSeriesVm.cs}
 
@@ -24,7 +24,7 @@ source not found{uwp,.doc-alert}
 
 ```
 
-source not found, this article might not be built yet for this platform{uwp,.doc-alert-404}
+Source not found, this article might not be built yet for this platform{uwp,.doc-alert-404}
 
 ### MultipleSeriesForm code behind{wf}
 
