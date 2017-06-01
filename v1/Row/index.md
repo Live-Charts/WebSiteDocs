@@ -4,18 +4,23 @@
 
 <pulled></pulled>
 
-**Code Behind**
+### Code Behind
 
 ```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Basic%20Bars/BasicRowExample.xaml.cs}
+
 ```
 ```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/Basic%20Bars/BasicColumn.xaml.cs}
+
 ```
 ```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/Cartesian/BasicBar/BasicRowExample.cs}
+
 ```
 
-**XAML{uwp||wpf}**
+### XAML{uwp||wpf}
 
 ```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Basic%20Bars/BasicRowExample.xaml}
+
 ```
 ```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/Basic%20Bars/BasicColumn.xaml}
+
 ```

@@ -4,20 +4,25 @@
 
 <pulled></pulled>
 
-**Code Behind**
+### Code Behind
 
 ```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/PieChart/PieChartExample.xaml.cs}
+
 ```
 ```{uwp,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/PieChart/PieChartExample.xaml.cs}
+
 ```
 ```{wf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/PieChart/PieChartExample.cs}
+
 ```
 
-**XAML{uwp||wpf}**
+### XAML{uwp||wpf}
 
 ```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/PieChart/PieChartExample.xaml}
+
 ```
 ```{uwp,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/PieChart/PieChartExample.xaml}
+
 ```
 
 
@@ -27,18 +32,23 @@
     Use the <i>PieChart.InnerRadius</i> property to create doughnut charts.
 </p>
 
-**Code Behind**
+### Code Behind
 
 ```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/PieChart/DoughnutChartExample.xaml.cs}
+
 ```
 ```{uwp,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/PieChart/DoughnutChartExample.xaml.cs}
+
 ```
 ```{wf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/PieChart/DoughnutExample.cs}
+
 ```
 
-**XAML{uwp||wpf}**
+### XAML{uwp||wpf}
 
 ```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/PieChart/DoughnutChartExample.xaml}
+
 ```
 ```{uwp,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/PieChart/DoughnutChartExample.xaml}
+
 ```

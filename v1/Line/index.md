@@ -4,11 +4,11 @@
 
 Grab a new *CartesianChart* control from your toolbox.{wf}
 
-<pulled />
+<pulled></pulled>
 
-**Code Behind**
+### Code Behind
 
-```{wpf,!&quot;https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/PointShapeLine/PointShapeLineExample.cs}
+```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/PointShapeLine/PointShapeLineExample.cs}
 
 ```
 
@@ -20,7 +20,7 @@ Grab a new *CartesianChart* control from your toolbox.{wf}
 
 ```
 
-**XAML{wpf||uwp}**
+### XAML{wpf||uwp}
 
 ```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/PointShapeLine/PointShapeLineExample.xaml}
 

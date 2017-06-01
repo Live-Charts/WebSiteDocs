@@ -10,18 +10,23 @@
 
 <pulled></pulled>
 
-**Code Behind**
+### Code Behind
 
 ```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/ScatterPlot/ScatterExample.xaml.cs}
+
 ```
 ```{uwp,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/ScatterPlot/ScatterExample.xaml.cs}
+
 ```
 ```{wf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/Cartesian/ScatterExample/ScatterForm.cs}
+
 ```
 
-**XAML{uwp||wpf}**
+### XAML{uwp||wpf}
 
 ```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/ScatterPlot/ScatterExample.xaml}
+
 ```
 ```{uwp,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/ScatterPlot/ScatterExample.xaml}
+
 ```

@@ -17,10 +17,12 @@ Angular gauges are not supported yet for Uwp{uwp}
 
 ```
 
-source not found{.doc-alert}
+source not found{uwp,.doc-alert}
 
 ### XAML{uwp||wpf}
 
 ```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/Gauges/AngularGaugeExmple.xaml}
  
 ```
+
+source not found{uwp,.doc-alert}
