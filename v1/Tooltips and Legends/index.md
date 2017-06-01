@@ -80,7 +80,7 @@ In the next sample, we will configure our chart to plot *CustomerVm* class, and 
 
 ### Tooltip from scratch
 
-<pulled />
+<pulled ></pulled>
 
 Right click in your solution explorer, Add -> New Item -> Browse for Class, name the file CustomerVm.cs and replace the generated file content with:
 
@@ -110,7 +110,7 @@ Notice we used the *DataContext* property of the *UserControl*, and binded the *
 
 Lets also create a simple custom Legend, with a custom style, add another user control and name it *CustomersLegend*, the logic is the same as the custom tooltip, you implement *IChartLegend* then you handle the injected data by LiveCharts
 
-<pulled />
+<pulled ></pulled>
 
 ```{!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomersLegend.xaml}
 
