@@ -4,32 +4,6 @@ A Label is any string representation of any value in the chart, they are normall
 
 ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/labels.jpg)
 
-<pulled ></pulled>
-
-### Code Behind
-
-```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Labels/LabelsExample.xaml.cs}
-
-```
-
-```{uwp,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/Labels/LabelsExample.xaml.cs}
-
-```
-
-```{wf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/Cartesian/Labels/Labels.cs}
-
-```
-
-### XAML{wpf||uwp}
-
-```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Labels/LabelsExample.xaml}
-
-```
-
-```{uwp,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/Labels/LabelsExample.xaml}
-
-```
-
 ### Axis Labels
 
 An *Axis* has 2 types of labels, formatted and mapped labels.
@@ -141,4 +115,34 @@ cartesianChart1.AxisX.Add(new LiveCharts.Wpf.Axis
      IsEnabled = false //disable it to make it invisible.
    }
 });
+```
+
+### Sample
+
+<pulled ></pulled>
+
+The image in the top of this article is the result of:
+
+### Code Behind
+
+```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Labels/LabelsExample.xaml.cs}
+
+```
+
+```{uwp,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/Labels/LabelsExample.xaml.cs}
+
+```
+
+```{wf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/Cartesian/Labels/Labels.cs}
+
+```
+
+### XAML{wpf||uwp}
+
+```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/Labels/LabelsExample.xaml}
+
+```
+
+```{uwp,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/Labels/LabelsExample.xaml}
+
 ```
