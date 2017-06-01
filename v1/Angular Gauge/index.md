@@ -17,7 +17,7 @@ Angular gauges are not supported yet for Uwp{uwp}
 
 ```
 
-source not found{uwp,.doc-alert}
+source not found, this article might not be built yet for this platform{uwp,.doc-alert-404}
 
 ### XAML{uwp||wpf}
 
@@ -25,4 +25,4 @@ source not found{uwp,.doc-alert}
  
 ```
 
-source not found{uwp,.doc-alert}
+source not found, this article might not be built yet for this platform{uwp,.doc-alert-404}
