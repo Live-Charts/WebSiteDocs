@@ -2,31 +2,31 @@
 
 This feature is not supported in this platform.{.doc-alert,uwp||wf}
 
-You can set a default style for any chart in your application, you must select colors, size and weight, according to your needs.{!uwp||wf}
+You can set a default style for any chart in your application, you must select colors, size and weight, according to your needs.{wpf}
 
-### Colors{!uwp||wf}
+### Colors{wpf}
 
-This set of colors will be the default used in your series, when the number of series is greater than the number of colors in the theme, then the colors will repeat.{!uwp||wf}
+This set of colors will be the default used in your series, when the number of series is greater than the number of colors in the theme, then the colors will repeat.{wpf}
 
 + **Material**, based on <a href="https://material.google.com/style/color.html">material design</a> from Google.
 + **Metro**, based on MoedernUi design
 + **Blue**, a scale of blues
 + **White**, a scale of light colors
-+ **Black**, a scale of dark colors{!uwp||wf}
++ **Black**, a scale of dark colors{wpf}
 
-### Size{!uwp||wf}
+### Size{wpf}
 
 The size determines the *FontSize* of *Axes* and *Series.DataLabels*, it also sets the default size of *Series.PointGeometrySize*, options are small (s), medium (m) and large (l).
 
-### Weight{!uwp||wf}
+### Weight{wpf}
 
 The weight defines the *Axis.Separator* stroke thickness and stroke dash array, it also defines the default *Series.StrokeThickness* property, options are light, normal and bold.{!uwp||wf}
 
-### Sample{!uwp||wf}
+### Sample{wpf}
 
 In your solution explorer open App.xaml and add a *ResourceDictionary* to your application resources, in this dictionary select the a color set, size and weight as shown in the code bellow, in this case we are using material design colors, medium size and normal weight.{!uwp||wf}
 
-```{!uwp||wf}
+```{wpf}
 &lt;Application x:Class="Wpf.App"
   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -64,12 +64,12 @@ In your solution explorer open App.xaml and add a *ResourceDictionary* to your a
 &lt;/Application>
 ```
 
-### Custom Style{!uwp||wf}
+### Custom Style{wpf}
 
 
-You can also write your own theme, here is an example of a basic skeleton:{!uwp||wf}
+You can also write your own theme, here is an example of a basic skeleton:{wpf}
 
-```{!uwp||wf}
+```{wpf}
 &lt;Application x:Class="Wpf.App"
   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
