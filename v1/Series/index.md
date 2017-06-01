@@ -71,7 +71,7 @@ every series, please browse the object explorer in this web site, for example br
 
 ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/custom-line.jpg)
 
-**Code Behind{wpf||uwp}**
+#### Code Behind{wpf||uwp}
 
 ```{wpf||uwp}
 using LiveCharts;
@@ -162,7 +162,7 @@ namespace Winforms.Cartesian.Customized_Series
 }
 ```
 
-**XAML{wpf||uwp}**
+#### XAML{wpf||uwp}
 
 ```{wpf||uwp}
 &lt;lvc:CartesianChart Background="#222E31"&gt;
