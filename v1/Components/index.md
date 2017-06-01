@@ -3,7 +3,7 @@
 LiveCharts is designed to be easy for the user, everything is updated and animated
 automatically, the library will only update when it considers it is necessary, not every time 
 your data changes, when you add/remove series, or add/remove values the chart will update by itself,
-you really don’t need to worry about anything but your business, let LiveCharts handle the charting.
+you don’t need to worry about anything but your business, let LiveCharts handle the charting.
 
 ### Starting Sample
 
@@ -11,7 +11,7 @@ There are many types ready to plot already defined, you can learn more in the
 [Types and Configuration section](/App/examples/v1/{{sms.platform}}/Types%20and%20Configuration), in 
 this brief example we are plotting double values.
 
-*Code Behind*
+#### Code Behind
 
 ```{wpf||uwp}
 SeriesCollection = new SeriesCollection
@@ -40,7 +40,7 @@ myChart.Series = new SeriesCollection
 };
 ```
 
-*XAML{wpf||uwp}*
+#### XAML{wpf||uwp}
 
 ```{wpf||uwp}
 &lt;lvc:CartesianChart Series="{Binding SeriesCollection}" />
