@@ -1,4 +1,4 @@
-### Axes
+# Axes
 
 You can practically custom everything in LiveCharts and axes are not the exception, the next image illustrates an axis:
 

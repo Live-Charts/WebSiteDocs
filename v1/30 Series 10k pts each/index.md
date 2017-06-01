@@ -20,14 +20,16 @@ source not found{uwp,.doc-alert}
 
 ### XAML{uwp||wpf}
 
-### Code Behind{wf}
-
-```{wpf,!https://raw.githubusercontent.com/Live-Charts/GearedExamples/master/WinForms/MultipleSeries/MultipleSeriesVm.cs}
+```{wpf,!https://raw.githubusercontent.com/Live-Charts/GearedExamples/master/Wpf/MultipleSeriesTest/MultipleSeriesView.xaml}
 
 ```
 
 source not found{uwp,.doc-alert}
 
-```{wf,!https://raw.githubusercontent.com/Live-Charts/GearedExamples/master/WinForms/MultipleSeries/MultipleSeriesVm.cs}
+### MultipleSeriesForm code behind{wf}
+
+source not found{uwp,.doc-alert}
+
+```{wf,!https://raw.githubusercontent.com/Live-Charts/GearedExamples/master/WinForms/MultipleSeries/MultipleSeriesExample.cs}
 
 ```
