@@ -1,4 +1,4 @@
-# INotifyPropertyChanged
+# Notify Property Changed
 
 When you require a point to update automatically when a property changes, you must implement *INotifyPropertyChanged*, this interface is provided by the .Net framework, in this article we are building *ObservableValue* class from scratch, notice this class is already defined in the library, *INotifyPropertyChanged* is a common component of .Net framework, if you want to learn more about it, the web is full of articles, basically it is useful to rise an event every time a property changes.
 
