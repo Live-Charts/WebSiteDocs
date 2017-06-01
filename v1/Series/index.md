@@ -4,14 +4,14 @@
 
 All the series have *Stroke* and *Fill* properties, these properties handle the color, both properties
 type is *System.Windows.Media.Brush* you can use complex fills or stokes,
-[here](https://msdn.microsoft.com/en-us/library/aa970904(v=vs.100).aspx) is a good article about it.
+[here](https://msdn.microsoft.com/en-us/library/aa970904%28v=vs.100%29.aspx) is a good article about it.
 
 ```
 mySeries.Fill = Brushes.Red;
 mySeries.Stroke = Brushes.Blue;
 ```
 
-### StrokeThickness, StrokeDashedArray
+### StrokeThickness and StrokeDashedArray
 
 Use the *Series.StrokeThickness* property as you need, to draw dashed strokes you can use the
 *Series.StrokeDashArray* property, you can find more information about dashed arrays
@@ -38,6 +38,7 @@ property, you can control which series is over or under in the z plane, here is 
 &lt;lvc:LineSeries Panel.ZIndex="1" /&gt;
 &lt;lvc:LineSeries Panel.ZIndex="2" /&gt;
 ```
+
 ```{uwp}
 &lt;lvc:LineSeries Canvas.ZIndex="0" /&gt;
 &lt;lvc:LineSeries Canvas.ZIndex="1" /&gt;
