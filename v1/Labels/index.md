@@ -17,9 +17,14 @@ To achieve this use the *Axis.LabelFormatter* property, it stores a function tha
 value as parameter and returns a string, LiveCharts will use this function every time it needs to display a chart value as *string*.
 
 ```
-MyAxis.LabelFormatter = val => val.ToString("C"); //as currency
-MyAxis.LabelFormatter = val => val + "°"; //as degrees
-MyAxis.LabelFormatter = val => val + ".00 items sold"; //or any other custom format
+//as currency
+MyAxis.LabelFormatter = val => val.ToString("C");
+
+//as degrees
+MyAxis.LabelFormatter = val => val + "°";
+
+//or any other custom format
+MyAxis.LabelFormatter = val => val + ".00 items sold";
 ```
 
 ### Mapped Labels
@@ -85,7 +90,7 @@ Some times your labels are long, and you need to optimize the space, in this cas
     &lt;lvc:Axis LabelsRotation="13" Labels="{Binding Labels}"&gt;
       &lt;lvc:Axis.Separator&gt;
         &lt;!--
-        force the separator step to 1, so it always display all labels
+        force the separator step to 1, so it always display all the labels
         if you don't force the separator, it will be calculated 
         automatically, and could skip some labels,
         disable it to make it invisible
@@ -109,7 +114,7 @@ cartesianChart1.AxisX.Add(new LiveCharts.Wpf.Axis
       "Scottie Brogdon"
    },
    LabelsRotation = 13,
-   Separator = new Separator // force the separator step to 1, so it always display all labels
+   Separator = new Separator // force the separator step to 1, so it always display all the labels
    {
      Step = 1, // if you don't force the separator, it will be calculated automatically, and could skip some labels
      IsEnabled = false //disable it to make it invisible.

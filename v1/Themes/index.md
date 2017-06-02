@@ -32,35 +32,45 @@ In your solution explorer open App.xaml and add a *ResourceDictionary* to your a
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
   StartupUri="MainWindow.xaml">
     &lt;Application.Resources>
-        &lt;ResourceDictionary>
-            &lt;ResourceDictionary.MergedDictionaries>
+      &lt;ResourceDictionary>
+          &lt;ResourceDictionary.MergedDictionaries>
                
-                &lt;!--Select colors set, options are material, metro, blue, white and black-->
+            &lt;!--Select colors set, options are material, metro, blue, white and black-->
                 
-                &lt;!--Material design colors-->&lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/Colors/material.xaml" />
-                &lt;!--Metro colors-->&lt;!--&lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/Colors/metro.xaml" />-->
-                &lt;!--Blue gradient-->&lt;!--&lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/Colors/blue.xaml" />-->
-                &lt;!--white gradient-->&lt;!--&lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/Colors/white.xaml" />-->
-                &lt;!--black gradient-->&lt;!--&lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/Colors/black.xaml" />-->
+            &lt;!--Material design colors-->
+            &lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/Colors/material.xaml" />
+            &lt;!--Metro colors-->
+            &lt;!--&lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/Colors/metro.xaml" />-->
+            &lt;!--Blue gradient-->
+            &lt;!--&lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/Colors/blue.xaml" />-->
+            &lt;!--white gradient-->
+            &lt;!--&lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/Colors/white.xaml" />-->
+            &lt;!--black gradient-->
+            &lt;!--&lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/Colors/black.xaml" />-->
                 
-                &lt;!--Select size, options are small, medium and large-->
+            &lt;!--Select size, options are small, medium and large-->
                 
-                &lt;!--small-->&lt;!--&lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/Size/s.xaml" />-->
-                &lt;!--medium-->&lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/Size/m.xaml" />
-                &lt;!--large-->&lt;!--&lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/Size/l.xaml" />-->
+            &lt;!--small-->
+            &lt;!--&lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/Size/s.xaml" />-->
+            &lt;!--medium-->
+            &lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/Size/m.xaml" />
+            &lt;!--large-->
+            &lt;!--&lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/Size/l.xaml" />-->
                 
-                &lt;!--Select weight, options are light, normal and bold-->
-                &lt;!--light-->&lt;!--&lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/Weight/light.xaml" />-->
-                &lt;!--normal-->&lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/Weight/normal.xaml" />
-                &lt;!--bold-->&lt;!--&lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/Weight/bold.xaml" />-->
+            &lt;!--Select weight, options are light, normal and bold-->
+            &lt;!--light-->
+            &lt;!--&lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/Weight/light.xaml" />-->
+            &lt;!--normal-->
+            &lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/Weight/normal.xaml" />
+            &lt;!--bold-->
+            &lt;!--&lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/Weight/bold.xaml" />-->
                 
-                &lt;!--Also add the base theme, this is required always-->
-                &lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/base.xaml" />
+            &lt;!--Also add the base theme, this is required always-->
+            &lt;ResourceDictionary Source="pack://application:,,,/LiveCharts.Wpf;component/Themes/base.xaml" />
 
-
-            &lt;/ResourceDictionary.MergedDictionaries>
-        &lt;/ResourceDictionary>
-    &lt;/Application.Resources>
+        &lt;/ResourceDictionary.MergedDictionaries>
+     &lt;/ResourceDictionary>
+  &lt;/Application.Resources>
 &lt;/Application>
 ```
 
@@ -71,79 +81,104 @@ You can also write your own theme, here is an example of a basic skeleton:{wpf}
 
 ```{wpf}
 &lt;Application x:Class="Wpf.App"
-  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-  xmlns:lvc="clr-namespace:LiveCharts.Wpf"
-  xmlns:system="clr-namespace:System;assembly=mscorlib"
-  StartupUri="MainWindow.xaml">
-    &lt;Application.Resources>
-        &lt;ResourceDictionary>
-            &lt;ResourceDictionary.MergedDictionaries>
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  	xmlns:lvc="clr-namespace:LiveCharts.Wpf"
+	xmlns:system="clr-namespace:System;assembly=mscorlib"
+  	StartupUri="MainWindow.xaml">
+  &lt;Application.Resources>
+    &lt;ResourceDictionary>
+      &lt;ResourceDictionary.MergedDictionaries>
                
-                &lt;lvc:ColorsCollection x:Key="ColorsCollection">
-                    &lt;Color A="255" R="33" G="149" B="242" />
-                    &lt;Color A="255" R="243" G="67" B="54" />
-                    &lt;Color A="255" R="254" G="192" B="7" />
-                    &lt;Color A="255" R="96" G="125" B="138" />
-                    &lt;Color A="255" R="232" G="30" B="99" />
-                    &lt;Color A="255" R="76" G="174" B="80" />
-                    &lt;Color A="255" R="63" G="81" B="180" />
-                    &lt;Color A="255" R="204" G="219" B="57" />
-                &lt;/lvc:ColorsCollection>
+        &lt;lvc:ColorsCollection x:Key="ColorsCollection">
+          &lt;Color A="255" R="33" G="149" B="242" />
+          &lt;Color A="255" R="243" G="67" B="54" />
+          &lt;Color A="255" R="254" G="192" B="7" />
+          &lt;Color A="255" R="96" G="125" B="138" />
+          &lt;Color A="255" R="232" G="30" B="99" />
+          &lt;Color A="255" R="76" G="174" B="80" />
+          &lt;Color A="255" R="63" G="81" B="180" />
+          &lt;Color A="255" R="204" G="219" B="57" />
+        &lt;/lvc:ColorsCollection>
     
-                &lt;system:Double x:Key="Size">12&lt;/system:Double>
+        &lt;system:Double x:Key="Size">12&lt;/system:Double>
     
-                &lt;system:Double x:Key="SeparatorStrokeThickness">1.8&lt;/system:Double>
-                &lt;DoubleCollection x:Key="SeparatorStrokeDashArray">3&lt;/DoubleCollection>
-                &lt;system:Double x:Key="SeriesStrokeThickness">3.0&lt;/system:Double>
+        &lt;system:Double x:Key="SeparatorStrokeThickness">
+          1.8
+        &lt;/system:Double>
+        &lt;DoubleCollection x:Key="SeparatorStrokeDashArray">
+          3
+        &lt;/DoubleCollection>
+        &lt;system:Double x:Key="SeriesStrokeThickness">
+          3.0
+        &lt;/system:Double>
     
-                &lt;Style TargetType="lvc:CartesianChart">
-                    &lt;Setter Property="AnimationsSpeed" Value="0:0:0.420">&lt;/Setter>
-                    &lt;Setter Property="SeriesColors" Value="{StaticResource ColorsCollection}"/>
-                &lt;/Style>
+        &lt;Style TargetType="lvc:CartesianChart">
+          &lt;Setter Property="AnimationsSpeed" Value="0:0:0.420">&lt;/Setter>
+          &lt;Setter Property="SeriesColors" Value="{StaticResource ColorsCollection}"/>
+        &lt;/Style>
     
-                &lt;Style TargetType="lvc:Axis">
-                    &lt;Setter Property="FontSize" Value="{StaticResource Size}">&lt;/Setter>
-                    &lt;Setter Property="FontFamily" Value="Calibri">&lt;/Setter>
-                    &lt;Setter Property="Foreground" Value="#99303030">&lt;/Setter>
-                &lt;/Style>
+        &lt;Style TargetType="lvc:Axis">
+          &lt;Setter Property="FontSize" Value="{StaticResource Size}" />
+          &lt;Setter Property="FontFamily" Value="Calibri" />
+          &lt;Setter Property="Foreground" Value="#99303030" />
+        &lt;/Style>
     
-                &lt;Style TargetType="lvc:Separator">
-                    &lt;Setter Property="StrokeThickness" Value="{StaticResource SeparatorStrokeThickness}">&lt;/Setter>
-                    &lt;Setter Property="StrokeDashArray" Value="{StaticResource SeparatorStrokeDashArray}">&lt;/Setter>
-                    &lt;Setter Property="Stroke" Value="#1A303030">&lt;/Setter>
-                    &lt;Style.Triggers>
-                        &lt;Trigger Property="AxisOrientation" Value="X">
-                            &lt;Setter Property="IsEnabled" Value="False">&lt;/Setter>
-                        &lt;/Trigger>
-                    &lt;/Style.Triggers>
-                &lt;/Style>
+        &lt;Style TargetType="lvc:Separator">
+          &lt;Setter Property="StrokeThickness" 
+                     Value="{StaticResource SeparatorStrokeThickness}" />
+          &lt;Setter Property="StrokeDashArray" 
+                     Value="{StaticResource SeparatorStrokeDashArray}" />
+          &lt;Setter Property="Stroke" Value="#1A303030" />
+          &lt;Style.Triggers>
+            &lt;Trigger Property="AxisOrientation" Value="X">
+              &lt;Setter Property="IsEnabled" Value="False">&lt;/Setter>
+            &lt;/Trigger>
+          &lt;/Style.Triggers>
+        &lt;/Style>
     
-                &lt;Style TargetType="lvc:Series" x:Key="SeriesStyle">
-                    &lt;Setter Property="FontFamily" Value="Calibri">&lt;/Setter>
-                    &lt;Setter Property="FontSize" Value="{StaticResource Size}">&lt;/Setter>
-                    &lt;Setter Property="StrokeThickness" Value="{StaticResource SeriesStrokeThickness}">&lt;/Setter>
-                &lt;/Style>
+        &lt;Style TargetType="lvc:Series" x:Key="SeriesStyle">
+          &lt;Setter Property="FontFamily" Value="Calibri" />
+          &lt;Setter Property="FontSize" Value="{StaticResource Size}" />
+          &lt;Setter Property="StrokeThickness" 
+                     Value="{StaticResource SeriesStrokeThickness}" />
+        &lt;/Style>
     
-                &lt;Style TargetType="lvc:CandleSeries" BasedOn="{StaticResource SeriesStyle}"/>
-                &lt;Style TargetType="lvc:ColumnSeries" BasedOn="{StaticResource SeriesStyle}"/>
-                &lt;Style TargetType="lvc:HeatSeries" BasedOn="{StaticResource SeriesStyle}"/>
-                &lt;Style TargetType="lvc:LineSeries" BasedOn="{StaticResource SeriesStyle}">
-                    &lt;Setter Property="PointGeometrySize" Value="{StaticResource Size}">&lt;/Setter>
+                &lt;Style TargetType="lvc:CandleSeries" 
+                          BasedOn="{StaticResource SeriesStyle}"/>
+                &lt;Style TargetType="lvc:ColumnSeries" 
+                          BasedOn="{StaticResource SeriesStyle}"/>
+                &lt;Style TargetType="lvc:HeatSeries" 
+                          BasedOn="{StaticResource SeriesStyle}"/>
+                &lt;Style TargetType="lvc:LineSeries" 
+                          BasedOn="{StaticResource SeriesStyle}">
+                  &lt;Setter Property="PointGeometrySize" 
+                             Value="{StaticResource Size}" />
                 &lt;/Style>
-                &lt;Style TargetType="lvc:StepLineSeries" BasedOn="{StaticResource SeriesStyle}">
-                    &lt;Setter Property="PointGeometrySize" Value="{StaticResource Size}">&lt;/Setter>
+                &lt;Style TargetType="lvc:StepLineSeries" 
+                          BasedOn="{StaticResource SeriesStyle}">
+                    &lt;Setter Property="PointGeometrySize" 
+                               Value="{StaticResource Size}" />
                 &lt;/Style>
-                &lt;Style TargetType="lvc:VerticalLineSeries" BasedOn="{StaticResource SeriesStyle}">
-                    &lt;Setter Property="PointGeometrySize" Value="{StaticResource Size}">&lt;/Setter>
+                &lt;Style TargetType="lvc:VerticalLineSeries" 
+                          BasedOn="{StaticResource SeriesStyle}">
+                    &lt;Setter Property="PointGeometrySize" 
+                               Value="{StaticResource Size}" />
                 &lt;/Style>
-                &lt;Style TargetType="lvc:OhlcSeries" BasedOn="{StaticResource SeriesStyle}"/>
-                &lt;Style TargetType="lvc:RowSeries" BasedOn="{StaticResource SeriesStyle}"/>
-                &lt;Style TargetType="lvc:ScatterSeries" BasedOn="{StaticResource SeriesStyle}"/>
-                &lt;Style TargetType="lvc:StackedAreaSeries" BasedOn="{StaticResource SeriesStyle}"/>
-                &lt;Style TargetType="lvc:StackedColumnSeries" BasedOn="{StaticResource SeriesStyle}"/>
-                &lt;Style TargetType="lvc:StackedRowSeries" BasedOn="{StaticResource SeriesStyle}"/>
-                &lt;Style TargetType="lvc:VerticalStackedAreaSeries" BasedOn="{StaticResource SeriesStyle}"/>
+                &lt;Style TargetType="lvc:OhlcSeries" 
+                          BasedOn="{StaticResource SeriesStyle}"/>
+                &lt;Style TargetType="lvc:RowSeries" 
+                          BasedOn="{StaticResource SeriesStyle}"/>
+                &lt;Style TargetType="lvc:ScatterSeries" 
+                          BasedOn="{StaticResource SeriesStyle}"/>
+                &lt;Style TargetType="lvc:StackedAreaSeries" 
+                          BasedOn="{StaticResource SeriesStyle}"/>
+                &lt;Style TargetType="lvc:StackedColumnSeries" 
+                          BasedOn="{StaticResource SeriesStyle}"/>
+                &lt;Style TargetType="lvc:StackedRowSeries" 
+                          BasedOn="{StaticResource SeriesStyle}"/>
+                &lt;Style TargetType="lvc:VerticalStackedAreaSeries" 
+                          BasedOn="{StaticResource SeriesStyle}"/>
                 
             &lt;/ResourceDictionary.MergedDictionaries>
         &lt;/ResourceDictionary>

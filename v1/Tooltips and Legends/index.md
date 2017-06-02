@@ -46,8 +46,8 @@ An alternative sample:{uwp||wpf}
             &lt;Style TargetType="lvc:DefaultTooltip">
                 &lt;Setter Property="Background" Value="DarkOrange">&lt;/Setter>
                 &lt;Setter Property="Foreground" Value="White">&lt;/Setter>
-                &lt;Setter Property="ShowTitle" Value="False">&lt;/Setter>&lt;!--new property-->
-                &lt;Setter Property="ShowSeries" Value="False">&lt;/Setter>&lt;!--new property-->
+                &lt;Setter Property="ShowTitle" Value="False">&lt;/Setter>
+                &lt;Setter Property="ShowSeries" Value="False">&lt;/Setter>
                 &lt;Setter Property="FontSize" Value="16">&lt;/Setter>
                 &lt;Setter Property="FontWeight" Value="Bold">&lt;/Setter>
                 &lt;Setter Property="CornerRadius" Value="20">&lt;/Setter>

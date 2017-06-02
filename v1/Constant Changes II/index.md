@@ -6,23 +6,34 @@
 
 <pulled></pulled>
 
-**Code Behind**
+### SpeedTestVm.cs
 
 ```{wpf,!https://raw.githubusercontent.com/Live-Charts/GearedExamples/master/WinForms/SpeedTest/SpeedTestVm.cs}
+
 ```
 
-source not found{uwp,.doc-alert}
+Source not found, this article might not be built yet for this platform {uwp,.doc-alert}
 
 ```{wf,!https://raw.githubusercontent.com/Live-Charts/GearedExamples/master/WinForms/SpeedTest/SpeedTestVm.cs}
+
 ```
 
-**XAML{uwp||wpf}**
+### RelayCommand.cs{wpf}
 
-```{wpf,!https://raw.githubusercontent.com/Live-Charts/GearedExamples/master/WinForms/SpeedTest/SpeedTestVm.cs}
+```{wpf,!https://raw.githubusercontent.com/Live-Charts/GearedExamples/master/Wpf/SpeedTest/RelayCommand.cs}
+
 ```
 
-source not found{uwp,.doc-alert}
+### SpeedTestForm code behind
 
-```{wf,!https://raw.githubusercontent.com/Live-Charts/GearedExamples/master/WinForms/SpeedTest/SpeedTestVm.cs}
+```{wf,!https://raw.githubusercontent.com/Live-Charts/GearedExamples/master/WinForms/SpeedTest/SpeedTest.cs}
 ```
+
+### XAML{uwp||wpf}**
+
+```{wpf,!https://raw.githubusercontent.com/Live-Charts/GearedExamples/master/Wpf/SpeedTest/SpeedTestView.xaml}
+
+```
+
+Source not found, this article might not be built yet for this platform {uwp,.doc-alert}
 

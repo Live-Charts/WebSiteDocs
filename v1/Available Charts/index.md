@@ -6,60 +6,65 @@
 
 <div class="row spaced">
 
-​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+<div>Line Series</div>
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/lineSeries.jpg)
+</div>
+  
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+<div>Vertical Line Series</div>
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/verticallineseries.jpg)
+</div>
 
-​        <div>Line Series</div>
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+<div>Column Series</div>
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/columnseries.jpg)
+</div>
 
-​	![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/lineSeries.jpg)
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+<div>Row Series</div>
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/rowseries.jpg)
+</div>
 
-​    </div>
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+<div>Stacked Area Series</div>
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/stackedareaseries.jpg)
+</div>
 
-​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-​        <div>Vertical Line Series</div>
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+<div>Vertical Stacked Area Series</div>
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/verticalstackedareaseries.jpg)
+</div>
 
-​	![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/verticallineseries.jpg)
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+<div>Stacked Column Series</div>
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/stackedcolumnseries.jpg)
+</div>
 
-​    </div>
-​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-​        <div>Column Series</div>
-​        ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/columnseries.jpg)
-​    </div>
-​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-​        <div>Row Series</div>
-​        ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/rowseries.jpg)
-​    </div>
-​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-​        <div>Stacked Area Series</div>
-​        ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/stackedareaseries.jpg)
-​    </div>
-​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-​        <div>Vertical Stacked Area Series</div>
-​        ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/verticalstackedareaseries.jpg)
-​    </div>
-​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-​        <div>Stacked Column Series</div>
-​        ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/stackedcolumnseries.jpg)
-​    </div>
-​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-​        <div>Stacked Row Series</div>
-​        ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/stackedrowsseries.jpg)
-​    </div>
-​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-​        <div>Heat Series</div>
-​        ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/Heat%20Series.jpg)
-​    </div>
-​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-​        <div>OHCLand Candle Series</div>
-​        ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/ohclseries.jpg)
-​    </div>
-​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-​        <div>Bubbles Series</div>
-​        ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/buubleseries.jpg)
-​    </div>
-​    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
-​        <div>StepLine Series</div>
-​        ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/stepline.png)
-​    </div>
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+<div>Stacked Row Series</div>
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/stackedrowsseries.jpg)
+</div>
+
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+<div>Heat Series</div>
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/Heat%20Series.jpg)
+</div>
+
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+<div>OHCLand Candle Series</div>
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/ohclseries.jpg)
+</div>
+
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+<div>Bubbles Series</div>
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/buubleseries.jpg)
+</div>
+
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
+<div>StepLine Series</div>
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/stepline.png)
+</div>
 </div>
 
 Here is an example, notice some series use a specialized point, LiveCharts already knows how to plot many types, if you need to define your own, please take a read at  <a href="/App/Examples/v1/{{sms.platform}}/Types and Mappers">Types and Mappers</a> article.

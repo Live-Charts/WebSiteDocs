@@ -167,11 +167,20 @@ namespace Winforms.Cartesian.Customized_Series
 ```{wpf||uwp}
 &lt;lvc:CartesianChart Background="#222E31"&gt;
   &lt;lvc:CartesianChart.Series&gt;
-    &lt;lvc:LineSeries Values="{Binding Values1}" StrokeThickness="4" StrokeDashArray="2" 
-                       Stroke="#6BBA45" Fill="Transparent" LineSmoothness="0" PointGeometry="{x:Null}" /&gt;
-    &lt;lvc:LineSeries Values="{Binding Values2}" StrokeThickness="2" 
-                       Stroke="#1C8FC5" Fill="Transparent" LineSmoothness="1" 
-                       PointGeometrySize="15" PointForeround="#222E31"/&gt;
+    &lt;lvc:LineSeries Values="{Binding Values1}" 
+                       StrokeThickness="4" 
+                       StrokeDashArray="2" 
+                       Stroke="#6BBA45" 
+                       Fill="Transparent" 
+                       LineSmoothness="0" 
+                       PointGeometry="{x:Null}" /&gt;
+    &lt;lvc:LineSeries Values="{Binding Values2}" 
+                       StrokeThickness="2" 
+                       Stroke="#1C8FC5" 
+                       Fill="Transparent" 
+                       LineSmoothness="1" 
+                       PointGeometrySize="15" 
+                       PointForeround="#222E31"/&gt;
   &lt;/lvc:CartesianChart.Series&gt;
   &lt;lvc:CartesianChart.AxisX&gt;
     &lt;lvc:Axis IsMerged="True"&gt;
