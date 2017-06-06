@@ -3,6 +3,7 @@
 ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/angulargauge.jpg)
 
 Drag a new *AngularGauge* control from your toolbox.{wf}
+
 Angular gauges are not supported yet for Uwp{uwp}
 
 <pulled></pulled>

@@ -10,7 +10,7 @@
 <div>Line Series</div>
 ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/lineSeries.jpg)
 </div>
-  
+
 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 text-center">
 <div>Vertical Line Series</div>
 ![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/verticallineseries.jpg)
@@ -110,14 +110,22 @@ LiveCharts.SeriesCollection series = new LiveCharts.SeriesCollecion
 
 Use it to plot pies and doughnuts
 
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/doughnut.jpg)
+
 ### Gauge
 
 It has 2 modes, 180 and 360 degrees, useful to display progress or completion.
 
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/gauges.png)
+
 ### Angular Gauge
 
-Use it to display the current value in a range, for example a velocimeter.
+Use it to display the current value in a range.
+
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/angulargauge.jpg)
 
 ### Maps
 
 LiveCharts also support geo heat maps, they compare the values according to geographic zone.
+
+![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/geomap.png)
