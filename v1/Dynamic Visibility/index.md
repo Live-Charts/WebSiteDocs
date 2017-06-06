@@ -20,7 +20,7 @@ Use the *Visibility* property to hide/show any series, notice invisible series a
 
 ```
 
-### XAML{uwp||wpf}**
+### XAML{uwp||wpf}
 
 ```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/Cartesian/DynamicVisibility/DynamicVisibiltyExample.cs}
 
