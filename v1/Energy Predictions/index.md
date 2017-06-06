@@ -1,6 +1,6 @@
 # Energy Predictions
 
-![](https://raw.githubusercontent.com/Live-Charts/WebSiteDocs/master/v1/Resources/energy.gif)
+![](https://github.com/Live-Charts/WebSiteDocs/blob/master/v1/Resources/energypredictions.gif)
 
 <pulled></pulled>
 
