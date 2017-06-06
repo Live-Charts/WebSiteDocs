@@ -1,6 +1,6 @@
 # Events
 
-The *CartesianChart* object exposes many *events*, any *event* has also a equivalent property of type *ICommand*. The next table shows the supported events, and when they are fired:
+The *CartesianChart* object exposes many events, any event has also a equivalent property of type *ICommand*. The next table shows the supported events, and when they are fired:
 
 ### Supported events
 
@@ -62,7 +62,7 @@ This section includes a pratical sample using events and commands.
 
 ```
 
-### XAML{uwp||wpf}**
+### XAML{uwp||wpf}
 
 ```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/Cartesian/Events/EventsExample.cs}
 
