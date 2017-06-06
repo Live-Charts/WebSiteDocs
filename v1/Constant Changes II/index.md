@@ -24,12 +24,13 @@ Source not found, this article might not be built yet for this platform {uwp,.do
 
 ```
 
-### SpeedTestForm code behind
+### SpeedTestForm code behind{wf}
 
 ```{wf,!https://raw.githubusercontent.com/Live-Charts/GearedExamples/master/WinForms/SpeedTest/SpeedTest.cs}
+
 ```
 
-### XAML{uwp||wpf}**
+### XAML{uwp||wpf}
 
 ```{wpf,!https://raw.githubusercontent.com/Live-Charts/GearedExamples/master/Wpf/SpeedTest/SpeedTestView.xaml}
 
