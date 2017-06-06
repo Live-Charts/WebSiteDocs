@@ -20,7 +20,7 @@ You can always use *Axis.MinValue* and *Axis.MaxValue* properties to set the vis
 
 ```
 
-### XAML{uwp||wpf}**
+### XAML{uwp||wpf}
 
 ```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/Cartesian/DataPagination/DataPaginationExample.cs}
 
