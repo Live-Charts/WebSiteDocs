@@ -32,7 +32,7 @@ Source not found, this article might not be built yet for this platform{uwp,.doc
 
 ```
 
-```{uwp,!https://github.com/beto-rodriguez/Live-Charts/blob/master/Examples/Uwp/CartesianChart/Energy%20Predictions/OpacityConverter.cs}
+```{uwp,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/Energy%20Predictions/OpacityConverter.cs}
 
 ```
 
@@ -43,6 +43,6 @@ Source not found, this article might not be built yet for this platform{uwp,.doc
 
 ```
 
-```{uwp,!https://github.com/beto-rodriguez/Live-Charts/blob/master/Examples/Uwp/CartesianChart/Energy%20Predictions/ReverseConverter.cs}
+```{uwp,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/Energy%20Predictions/ReverseConverter.cs}
 
 ```
