@@ -62,19 +62,6 @@ This section includes a pratical sample using events and commands.
 
 ```
 
-### XAML{uwp||wpf}
-
-```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/Cartesian/Events/EventsExample.cs}
-
-```
-
-```{uwp,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Uwp/CartesianChart/Events/EventsExample.xaml}
-
-```
-
-```{wf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/Cartesian/Events/EventsExample.cs}
-
-```
 
 ### ViewModel.cs{wpf||uwp}
 
