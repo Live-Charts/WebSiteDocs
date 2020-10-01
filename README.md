@@ -1,4 +1,4 @@
-# WebSiteDocs
+# AmazingWebSiteDocs 
 
 Steps to edit web site content:
 
