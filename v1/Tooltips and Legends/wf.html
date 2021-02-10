@@ -9,14 +9,14 @@
 <h4>Customizing defaults</h4>
 
 <p>
-    you can customize a little about these classes, for example the background color, bullet size, or orientation, as shown in the next code snippet,
+    You can customize a little about these classes, for example the background color, bullet size, or orientation, as shown in the next code snippet,
 </p>
 
-<pre class="prettyprint">cartesianChart1.Datatooltip.Bulletize = 20;
+<pre class="prettyprint">cartesianChart1.DataTooltip.BulletSize = 20;
 cartesianChart1.DataTooltip.Background = Brushes.Red;</pre>
 
 <p>
-    You can also set the selection mode of your tooltip, for example with the next code we force our tooltip
+    You can also set the selection mode of your tooltip. For example, with the next code we force our tooltip
     to display only the point that was hovered.
 </p>
 
@@ -30,16 +30,16 @@ cartesianChart1.DataTooltip.Background = Brushes.Red;</pre>
 </p>
 
 <p>
-    Sadly there is not a native way to do this in WinForms, since LiveCharts.Winforms actually is a wrapper
-    for LieCharts.Wpf you must define Wpf UserControls to make this work, it is really easy and you don't
+    Sadly there is no native way to do this in WinForms. Since LiveCharts.Winforms actually is a wrapper
+    for LiveCharts.Wpf, you must define WPF UserControls to make this work, it is really easy and you don't
     really need to know too much about WPF to make this work.
 </p>
 
 <p>
-    The <i class="text-muted">DefaultTooltip</i> and <i class="text-muted">DefaultLegend</i> classes try to work for all cases, if you need a specialized
-    component you can easily define your own, the logic is the next, you create a custom UserControl,
-    LiveCharts will inject the data the user needs to see in the tooltip, and you need to handle how to
-    display this data according to your needs, you can do everything you know about WPF to make it work.
+    The <i class="text-muted">DefaultTooltip</i> and <i class="text-muted">DefaultLegend</i> classes try to work for all cases, but if you need a specialized
+    component you can easily define your own as a custom UserControl.
+    LiveCharts will inject the data the user needs to see in the tooltip, and you handle how to
+    display this data according to your needs.
 </p>
 
 <p>
@@ -59,9 +59,9 @@ cartesianChart1.DataTooltip.Background = Brushes.Red;</pre>
 <pre class="prettyprint" url="https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/CustomTooltipAndLegend/CustomerVM.cs"></pre>
 
 <p>
-    OK, now we are going to build our own DataTooltip, this tooltip will display all the
-    <i class="text-muted">CustomerVm</i> properties, Right click in your solution explorer
-    Add -> New Item -> Browse for <i class="text-muted">User Control (WPF)</i>, name the UserControl
+    OK, now we are going to build our own DataTooltip. This tooltip will display all the
+    <i class="text-muted">CustomerVm</i> properties. Right click in your solution explorer, then choose
+    Add -> New Item -> Browse for <i class="text-muted">User Control (WPF)</i>, and name the UserControl
     CustomersTooltip.
 </p>
 
