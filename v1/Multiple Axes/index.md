@@ -18,7 +18,7 @@
     container for your plots.
 </div>
 
-```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/MultiAxes/MultiAxesChart.xaml}
+```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/MultiAxes/MultiAxesChart.xam;l}
 
 ```
 
