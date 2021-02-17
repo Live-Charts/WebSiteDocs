@@ -59,7 +59,7 @@
     You can set a Fill and Stroke only for a specific series, if you don't then the library will decide a color according to your theme
 </p>
 
-<pre class="prettyprint">&lt;lvc:LineSeries Stroke="Red" Fill="Blue /"&gt;</pre>
+<pre class="prettyprint">&lt;lvc:LineSeries Stroke="Red" Fill="Blue" /&gt;</pre>
 
 <pre class="prettyprint">mySeries.Stroke = System.Windows.Media.Brushes.Red;
 mySeries.Fill = System.Windows.Media.Brushes.Blue;</pre>
@@ -70,7 +70,7 @@ mySeries.Fill = System.Windows.Media.Brushes.Blue;</pre>
     will be binded to the drawn shape, for example:
 </p>
 
-<pre class="prettyprint">&lt;lvc:LineSeries Visibility="Hidden" StrokeDashArray="2" Panel.Zindex="3" / &gt;</pre>
+<pre class="prettyprint">&lt;lvc:LineSeries Visibility="Hidden" StrokeDashArray="2" Panel.Zindex="3" /&gt;</pre>
 
 <p>
     Or from code behind
@@ -84,7 +84,7 @@ System.Windows.Controls.Panel.SetZIndex(mySeries, 3);</pre>
 
 <p>
     If necessary you can also define your own tooltips or legends controls,
-    <a href="/App/examples/v1/wpf/Customizing Tooltips">here</a> is an article about it
+    <a href="/App/examples/v1/wpf/Tooltips and Legends">here</a> is an article about it
 </p>
 
 <h4>Legends</h4>
