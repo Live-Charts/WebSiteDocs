@@ -60,7 +60,7 @@
 
 ```
 
-```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/WinForms/Cartesian/MultiAxes/MultipleAxesExample.cs}
+```{wpf,!https://raw.githubusercontent.com/beto-rodriguez/Live-Charts/master/Examples/Wpf/CartesianChart/FullyResponsive/FullyResponsiveExample.xaml.cs}
 
 ```
 
