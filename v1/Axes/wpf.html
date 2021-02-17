@@ -1,7 +1,7 @@
 ﻿<h3 class="important-tittle">Customizing Axis</h3>
 
 <p>
-    Practically you can custom everything in LiveCharts and axes are not the exception, the next image illustrates an axis.
+    You can customize just about everything in LiveCharts and axes are no exception. The next image illustrates a custom axis.
 </p>
 
 <div class="text-center">
@@ -19,20 +19,20 @@
 <h4>Merged Axes</h4>
 
 <p>
-    When you need to save some space, merge any axis in the chart, try using the
-    <i class="text-muted">Axis.IsMerged</i> property to true, the next image shows a merged
-    axis (left) vs a normal axis (right)
+    When you need to save space, merge axes in the chart. Set the
+    <i class="text-muted">Axis.IsMerged</i> property to true to merge axes together. The next image shows a merged
+    axis (left) vs a normal axis (right).
 </p>
 
 <div class="text-center">
     <img src="https://cloud.githubusercontent.com/assets/10853349/14399794/dfda95b0-fdb5-11e5-8504-6df683434e1b.png"/>
 </div>
 
-<h4>Axes positioning</h4>
+<h4>Axis positioning</h4>
 
 <p>
-    No matter if you have 1 or 10 axes, you could always specify where the axis is stacked, using the
-    <i class="text-muted">Axis.Position</i> property, option are <i class="text-muted">RightTop, LeftBottom</i>
+    No matter if you have 1 or 10 axes, you can always specify where the axis is stacked using the
+    <i class="text-muted">Axis.Position</i> property. Position options are <i class="text-muted">RightTop, LeftBottom</i>
 </p>
 
 <pre class="prettyprint">&lt;lvc:Axis Position="RightTop" /></pre>
@@ -45,16 +45,16 @@
 
 <p>
     Every axis separator is calculated automatically according to the chart size, and values range,
-    but some times you need a static separator step, for example every 30 seconds, or every 10 units,
-    another useful application is when you need to display all the labels, in this case setting the step
-    to 1 will force the chart to draw all the labels, finally to remove any step you can set it
+    but some times you need a static separator step, for example every 30 seconds, or every 10 units.
+    Another useful application is when you need to display all labels. In this case, setting the step
+    to 1 will force the chart to draw all the labels. Finally, to remove any step, you can set it
     back to <i class="text-muted">null</i>, and it will be calculated automatically.
 </p>
 
 <p>
-    <b>Warning!</b> Be careful when forcing steps, it could result in horrible performance issues,
-    if not used correctly, for example if your current range of values goes from 0 to 1,000 and you 
-    set the step to 1 the chart will draw 1,000 separators too.
+    <b>Warning!</b> Be careful when forcing steps, it could result in horrible performance issues
+    if not used correctly. For example, if your current range of values goes from 0 to 1,000 and you 
+    set the step to 1 the chart will draw 1,000 individual separators, possibly leading to performance or visual issues.
 </p>
 
 <p>
@@ -75,8 +75,8 @@
 &lt;/lvc:CartesianChart></pre>
 
 <p>
-    <b>Forcing step when using DateTime</b> 30 second in this case, you can find help about using date time
-    in the <a href="/App/examples/v1/wpf/Date%20Time">DateTime article</a>
+    <b>Forcing the step when using DateTime</b> 30 second steps in this case. You can find help about using DateTime objects
+    in the <a href="/App/examples/v1/wpf/Date%20Time">DateTime article.</a>
 </p>
 
 <pre class="prettyprint">//Code Behind
@@ -100,7 +100,7 @@ Step = TimeSpan.FromSeconds(30).Ticks;
 <h4>Styling Separators</h4>
 
 <p>
-    notice setting <i class="text-muted">Axis.Separator.IsEnabled</i> property to false will make
+    Notice that setting the <i class="text-muted">Axis.Separator.IsEnabled</i> property to false will make
     the separator invisible.
 </p>
 
